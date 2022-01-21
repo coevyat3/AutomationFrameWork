@@ -1,0 +1,8 @@
+testcases\LoginPageTest.class
+testcases\RegistrationPageTest.class
+testcases\GiftCardPageTest.class
+testcases\HomePageTest.class
+testcases\HowToSendPageTest.class
+testcases\NavBarPageTest.class
+testcases\SearchResultTest.class
+testcases\WhoToSendPageTest.class

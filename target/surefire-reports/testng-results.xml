@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="2" total="4" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-01-21T15:15:50 IST" name="A" finished-at="2022-01-21T15:15:55 IST" duration-ms="4925">
+    <groups>
+    </groups>
+    <test started-at="2022-01-21T15:15:50 IST" name="A" finished-at="2022-01-21T15:15:55 IST" duration-ms="4925">
+      <class name="testcases.HomePageTest">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:testcases.HomePageTest@2df3b89c]" started-at="2022-01-21T15:15:50 IST" name="beforeSuite" finished-at="2022-01-21T15:15:50 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method,java.lang.String)[pri:0, instance:testcases.HomePageTest@2df3b89c]" started-at="2022-01-21T15:15:50 IST" name="setup" finished-at="2022-01-21T15:15:54 IST" duration-ms="4743" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.HomePageTest.verifyLogoPresent()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CHROME]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyLogoPresent()[pri:3, instance:testcases.HomePageTest@2df3b89c]" started-at="2022-01-21T15:15:54 IST" name="verifyLogoPresent" finished-at="2022-01-21T15:15:54 IST" duration-ms="61" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyLogoPresent -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.HomePageTest@2df3b89c]" started-at="2022-01-21T15:15:54 IST" name="afterMethod" finished-at="2022-01-21T15:15:55 IST" duration-ms="121" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=verifyLogoPresent status=SUCCESS method=HomePageTest.verifyLogoPresent()[pri:3, instance:testcases.HomePageTest@2df3b89c] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testcases.HomePageTest -->
+    </test> <!-- A -->
+  </suite> <!-- A -->
+  <suite started-at="2022-01-21T15:15:29 IST" name="All Test Suite" finished-at="2022-01-21T15:15:50 IST" duration-ms="20240">
+    <groups>
+    </groups>
+    <test started-at="2022-01-21T15:15:29 IST" name="EndToEndTest" finished-at="2022-01-21T15:15:50 IST" duration-ms="20240">
+      <class name="testcases.RegistrationPageTest">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:testcases.RegistrationPageTest@4116aac9]" started-at="2022-01-21T15:15:29 IST" name="beforeSuite" finished-at="2022-01-21T15:15:29 IST" duration-ms="69" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeSuite -->
+        <test-method is-config="true" signature="setup(java.lang.reflect.Method,java.lang.String)[pri:0, instance:testcases.RegistrationPageTest@4116aac9]" started-at="2022-01-21T15:15:29 IST" name="setup" finished-at="2022-01-21T15:15:48 IST" duration-ms="18937" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void testcases.RegistrationPageTest.testRegistration()]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[CHROME]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="testRegistration()[pri:0, instance:testcases.RegistrationPageTest@4116aac9]" started-at="2022-01-21T15:15:48 IST" name="testRegistration" finished-at="2022-01-21T15:15:49 IST" duration-ms="350" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRegistration -->
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:testcases.RegistrationPageTest@4116aac9]" started-at="2022-01-21T15:15:49 IST" name="afterMethod" finished-at="2022-01-21T15:15:50 IST" duration-ms="937" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=testRegistration status=SUCCESS method=RegistrationPageTest.testRegistration()[pri:0, instance:testcases.RegistrationPageTest@4116aac9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- testcases.RegistrationPageTest -->
+    </test> <!-- EndToEndTest -->
+  </suite> <!-- All Test Suite -->
+</testng-results>

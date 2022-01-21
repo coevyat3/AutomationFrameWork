@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+    <test name="test">
+        <parameter name="browser" value="CHROME"></parameter>
+        <groups>
+            <run>
+                <include name="dataDrivenTest"/>
+            </run>
+        </groups>
+        <classes>
+            <class name="testcases.LoginPageTest" />
+        </classes>
+    </test>
+</suite>

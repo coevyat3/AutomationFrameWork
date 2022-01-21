@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite >
+<suite name="A">
+    <test verbose="5" preserve-order="true" name="A">
+        <parameter name="browser" value="CHROME"></parameter>
+        <group>
+            <c
+
+        </group>
+
+    </test>
+</suite>
