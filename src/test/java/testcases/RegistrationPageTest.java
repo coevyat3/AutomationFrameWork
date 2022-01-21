@@ -60,4 +60,5 @@ public class RegistrationPageTest extends TestBase {
     }
 
 
+
 }

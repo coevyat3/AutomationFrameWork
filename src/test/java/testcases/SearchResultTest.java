@@ -2,12 +2,16 @@ package testcases;
 
 import helper.assertion.AssertionHelper;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import testBase.TestBase;
 import org.testng.annotations.Test;
 import buymeObjects.*;
+import utils.ReadingSheets;
 
 import java.lang.reflect.Method;
+import java.util.ArrayList;
+import java.util.Iterator;
 
 public class SearchResultTest extends TestBase {
     NavBarPage navBarPage;
@@ -35,7 +39,8 @@ public class SearchResultTest extends TestBase {
     public void pickGiftCardFromSearchResultPage()  {
         giftCardPage=searchResultPage.pickGiftCard(Constants.giftCardItem);
         AssertionHelper.verifyTrue(giftCardPage.getGiftCardHeader().contains(Constants.giftCardItem));
-
     }
+
+
 
 }
