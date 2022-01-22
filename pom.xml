@@ -79,8 +79,9 @@
                 <configuration>
                     <suiteXmlFiles>
                         <suiteXmlFile>testall.xml</suiteXmlFile>
-                        <suiteXmlFile>testng.xml</suiteXmlFile>
+                        <suiteXmlFile>datadriven.xml</suiteXmlFile>
                     </suiteXmlFiles>
+
                 </configuration>
             </plugin>
             <plugin>

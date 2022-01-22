@@ -3,16 +3,9 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="EndToEndTest">
         <parameter name="browser" value="CHROME"></parameter>
-        <classes>
-               <class name="testcases.HomePageTest"></class>
-               <class name="testcases.NavBarPageTest"></class>
-               <class name="testcases.SearchResultTest"></class>
-               <class name="testcases.GiftCardPageTest"></class>
-               <class name="testcases.WhoToSendPageTest"></class>
-               <class name="testcases.HowToSendPageTest"></class>
-               <class name="testcases.LoginPageTest"></class>
-               <class name="testcases.RegistrationPageTest"></class>
-        </classes>
+      <classes>
+          <class name="testcases.WhoToSendPageTest"></class>
+      </classes>
            
     </test>
 </suite>

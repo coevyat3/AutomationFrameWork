@@ -9,6 +9,7 @@ import helper.browserConfiguration.config.ObjectReader;
 import helper.browserConfiguration.config.PropertyReader;
 
 
+import helper.excel.ExcelHelper;
 import helper.logger.LoggerHelper;
 import helper.resource.ResourceHelper;
 import utils.ExtentManager;
@@ -25,6 +26,7 @@ import org.testng.annotations.*;
 
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Method;
 import java.nio.file.Files;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -37,6 +39,11 @@ public class TestBase {
     public static WebDriver driver;
     private Logger log= LoggerHelper.getLogger(testBase.TestBase.class);
     private static File reportDirect;
+    protected ExcelHelper ex;
+    protected String tests="tests";
+    protected String test1="test";
+    private String status="status";
+
 
 
 
@@ -47,30 +54,40 @@ public class TestBase {
         extent = ExtentManager.getInstance();
     }
     @Parameters({"browser"})
-    public void Loader(String browser) throws Exception{
+    public void loadConfig(String browser) throws Exception{
         ObjectReader.reader = new PropertyReader();
         reportDirect = new File(ResourceHelper.getResourcePath("src/main/resources/screenShots"));
         setUpDriver(BrowserType.valueOf(browser));
         test = extent.createTest(getClass().getSimpleName());
         driver.get(ObjectReader.reader.getUrl());
+        ex = new ExcelHelper(ResourceHelper.getResourcePath("src/main/resources/dataprovider/Book1.xlsx"));
+
     }
 
 
 
 
     @AfterMethod(alwaysRun = true)
-    public void afterMethod(ITestResult result) throws IOException{
+
+    public void afterMethod(ITestResult result, Method method) throws IOException{
+        int row=ex.getRowCount(tests);
         if(result.getStatus() == ITestResult.FAILURE){
             test.log(Status.FAIL, result.getThrowable());
             String imagePath = captureScreen(result.getName(),driver);
             test.addScreenCaptureFromPath(imagePath);
+            ex.setCellData(tests,test1,row+1,method.getName());
+            ex.setCellData(tests,status,row+1, "fail");
         }
         else if(result.getStatus() == ITestResult.SUCCESS){
             test.log(Status.PASS, result.getName()+" is pass");
+            ex.setCellData(tests,test1,row+1,method.getName());
+            ex.setCellData(tests,status,row+1, "pass");
 
         }
         else if(result.getStatus() == ITestResult.SKIP){
             test.log(Status.SKIP, result.getThrowable());
+            ex.setCellData(tests,test1,row+1,method.getName());
+            ex.setCellData(tests,status,row+1, "skip");
         }
         log.info("**************"+result.getName()+"Finished***************");
         extent.flush();

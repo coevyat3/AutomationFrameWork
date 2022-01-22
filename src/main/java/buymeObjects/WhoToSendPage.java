@@ -1,6 +1,7 @@
 package buymeObjects;
 
 import com.aventstack.extentreports.Status;
+import helper.assertion.AssertionHelper;
 import helper.browserConfiguration.config.ObjectReader;
 import helper.logger.LoggerHelper;
 import helper.verification.VerificationHelper;
@@ -43,6 +44,24 @@ public class WhoToSendPage {
 
     @FindBy(css = "h1.bm-h1")
     private WebElement searchResultPageHeader;
+
+    @FindBy(css="div[class*=forSomeone]")
+    private WebElement someoneElse;
+
+    @FindBy(css="div[class*=forMyself]")
+    private WebElement forMySelf;
+
+    @FindBy(css="img[class*=gift-myself]")
+    private WebElement imgForMySelf;
+
+    @FindBy(css="div[class*=price-label]")
+    private WebElement price;
+
+    @FindBy(css="input[type='tel']")
+    private WebElement changePrice;
+
+    @FindBy(css = "div[class*='mx-6']>button")
+    private WebElement confirmPriceChange;
 
     public HowToSendPage sendAll(String t,String a,String b,String photo){
         new WaitHelper(driver).waitForElement(friendName, ObjectReader.reader.getExplicitWait());
@@ -96,6 +115,31 @@ public class WhoToSendPage {
         test.log(Status.INFO,"Verify  Who to send Page header text "+ searchResultPageHeader.getText());
         return new VerificationHelper(driver).getText(searchResultPageHeader);
     }
+    public boolean someoneElse(){
+        return new VerificationHelper(driver).isSelected(someoneElse);
+    }
+    public boolean clickOnMySelfCheckBox(){
+        forMySelf.click();
+       return new VerificationHelper(driver).isDisplayed(imgForMySelf);
+    }
+    public String changeGiftPrice(String txt){
+        setPrice();
+        setChangePrice(txt);
+        setConfirmPriceChange();
+        return price.getText().substring(1);
+
+    }
+    public void setPrice(){
+        price.click();
+    }
+    public void setChangePrice(String txt){
+        changePrice.clear();
+        changePrice.sendKeys(txt);
+    }
+    public void setConfirmPriceChange(){
+        confirmPriceChange.click();
+    }
+
 
 
 }

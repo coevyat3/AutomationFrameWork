@@ -22,7 +22,7 @@ public class HowToSendPageTest extends TestBase {
     @Parameters({"browser"})
     @BeforeMethod(alwaysRun = true)
     public void setup(Method method, String browser) throws Exception {
-        Loader(browser);
+        loadConfig(browser);
         navBarPage= new NavBarPage(driver);
         searchResultPage= new SearchResultPage(driver);
         giftCardPage= new GiftCardPage(driver);
@@ -30,7 +30,7 @@ public class HowToSendPageTest extends TestBase {
         howToSendPage= new HowToSendPage(driver);
         loginPage= new LoginPage(driver);
         searchResultPage= navBarPage.pickItem(Constants.amount,Constants.area,Constants.category);
-        giftCardPage=searchResultPage.pickGiftCard(Constants.giftCardItem);
+        giftCardPage=searchResultPage.pickGiftCardByBusinessName(Constants.giftCardItem);
         whoToSendPage= giftCardPage.insertAmount(Constants.amount);
         howToSendPage= whoToSendPage.sendAll(Constants.FriendName,Constants.Bless,Constants.OwnBless, ResourceHelper.getResourcePath("src/main/resources/photos/flower.jpg"));
 

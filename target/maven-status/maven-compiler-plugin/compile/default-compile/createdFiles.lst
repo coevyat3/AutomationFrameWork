@@ -12,12 +12,15 @@ helper\browserConfiguration\BrowserType.class
 buymeObjects\RegisterPage.class
 helper\browserConfiguration\config\ObjectReader.class
 helper\listener\RetryListener.class
+utils\UserData.class
 buymeObjects\PaymentPage.class
 helper\wait\WaitHelper.class
 buymeObjects\SearchResultPage.class
 helper\listener\ExtentListener.class
 helper\listener\Retry.class
 helper\logger\LoggerHelper.class
+utils\CreatingSheets.class
+utils\ReadingSheets.class
 helper\verification\VerificationHelper.class
 helper\resource\ResourceHelper.class
 buymeObjects\HowToSendPage.class
@@ -28,6 +31,5 @@ testBase\TestBase$1.class
 helper\frame\FrameHelper.class
 helper\browserConfiguration\ChromeBrowser.class
 helper\dropdown\DropDownHelper.class
-helper\excel\ExcelHelper$1.class
-helper\utils\ExtentManager.class
 buymeObjects\GiftCardPage.class
+utils\ExtentManager.class

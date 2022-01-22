@@ -1,6 +1,7 @@
 package testcases;
 
 import helper.assertion.AssertionHelper;
+import helper.verification.VerificationHelper;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
@@ -22,21 +23,32 @@ public class NavBarPageTest extends TestBase {
     @Parameters({"browser"})
     @BeforeMethod(alwaysRun = true)
     public void setup(Method method, String browser) throws Exception {
-        Loader(browser);
+        loadConfig(browser);
             navBarPage= new NavBarPage(driver);
             searchResultPage= new SearchResultPage(driver);
         }
-        @Test(priority = 1)
+        @Test(priority = 1,description = "pick a gift card with Valid values ")
         public void pickGiftFromNavBar(){
-            navBarPage.pickItem(Constants.amount,Constants.area,Constants.category);
-            AssertionHelper.verifyTrue(searchResultPage.getSearchResultHeader());
+            navBarPage.clickAmount();
+            navBarPage.clickActiveList(Constants.amount);
+            navBarPage.clickArea();
+            navBarPage.clickActiveList(Constants.area);
+            navBarPage.clickCategory();
+            navBarPage.clickActiveList(Constants.category);
         }
 
         @Test(priority = 2,groups = {"dataDrivenTest"} ,dataProvider = "searchBoxGift")
-    public void pickGiftFromInputBox(String txt){
+        public void pickGiftFromInputBox(String txt){
         navBarPage.searchFromInputBox(txt);
         AssertionHelper.verifyTrue(searchResultPage.getSearchResultHeader());
+
     }
+     @Test(priority = 2,description = "Test navbar inputBox with autoComplete suggest Pick")
+     public void searchGiftFromInputBoxSuggest(){
+       navBarPage.searchFromInputBoxAutoComplete(Constants.autoComplete,Constants.autoSuggestPick);
+     }
+
+
     @DataProvider(name="searchBoxGift")
     public Iterator<Object[]> sendLoginData(){
         ArrayList<Object[]> data = ReadingSheets.getCartData();

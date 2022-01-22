@@ -5,6 +5,9 @@ public class Constants {
     //PageSite url
     public static String URL="https://buyme.co.il/";
 
+    //HomePageMainCategory
+    public static final String birthDayCategory="יום הולדת";
+
 
     //loginDetails
      public static final String email="a1b1c1@xyz.com";
@@ -16,10 +19,13 @@ public class Constants {
     public static final String category="עד הבית";
     public static final String amount ="500";
     public static final String sport="ספורט";
+    public static final String autoComplete="sp";
+    public static final String autoSuggestPick="speedo";
 
     //pagesHeaders
     public static final String loginHeader="כניסה";
     public static final String registerHeader="הרשמה";
+    public static final String whoToSendPageHeader="רכישת מתנה";
 
     //GiftCardPage
     public static final String giftCardItem="CASTRO";

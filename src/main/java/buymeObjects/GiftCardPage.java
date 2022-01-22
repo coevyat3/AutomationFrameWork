@@ -9,6 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 import static testBase.TestBase.test;
 
 public class GiftCardPage {
@@ -24,8 +26,17 @@ public class GiftCardPage {
     @FindBy(css="input[inputmode]")
     private WebElement price;
 
+    @FindBy(css=".grid.gifts-list button")
+    private List<WebElement> giftCardPrices;
+
     @FindBy(css="div[class*=money]>button")
     private WebElement btn;
+
+    @FindBy(css="div[class*=read-more]>span")
+    private List<WebElement> readMore;
+
+    @FindBy(css="li.parsley-required")
+    private WebElement JSError;
 
     public String getGiftCardHeader(){
         log.info("Verify gift Card Page Header text " +giftCardHeader.getText());
@@ -35,13 +46,12 @@ public class GiftCardPage {
     public void enterAmount(String m){
         log.info("verify if Enter money Amount is Display ");
         test.log(Status.INFO,"verify if Enter money Amount is display");
-        if(new VerificationHelper(driver).isDisplayed(price)){
-            log.info( "Enter Money Amount " +m);
-            test.log(Status.INFO, ": Enter money Amount "+m);
+        if (isPricePresent(price)) {
             price.sendKeys(m);
-
         }
-
+        else {
+            giftCardPrices.get(1).click();
+        }
     }
     public WhoToSendPage insertAmount(String m){
         enterAmount(m);
@@ -49,6 +59,27 @@ public class GiftCardPage {
         test.log(Status.INFO,"Click on Button"+btn.getAttribute("gtm"));
         btn.click();
         return new WhoToSendPage(driver);
+    }
+    public boolean isPricePresent(WebElement element){
+        boolean flag=false;
+        try{
+            if(element.isDisplayed()){
+                flag=true;
+            }
+
+        }catch (Exception e){
+            e.printStackTrace();
+        }return  flag;
+    }
+    public void setReadMore(){
+        for(WebElement element:readMore){
+           element.click();
+        }
+    }
+    public boolean verifyJSError(){
+        btn.click();
+       return new VerificationHelper(driver).isDisplayed(JSError);
+
     }
 
 

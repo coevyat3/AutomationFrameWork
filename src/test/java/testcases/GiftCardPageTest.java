@@ -18,17 +18,31 @@ public class GiftCardPageTest extends TestBase {
     @Parameters({"browser"})
     @BeforeMethod(alwaysRun = true)
     public void setup(Method method, String browser) throws Exception {
-        Loader(browser);
+        loadConfig(browser);
          navBarPage= new NavBarPage(driver);
          searchResultPage= new SearchResultPage(driver);
          giftCardPage= new GiftCardPage(driver);
          whoToSendPage= new WhoToSendPage(driver);
          searchResultPage=navBarPage.pickItem(Constants.amount,Constants.area,Constants.category);
-         giftCardPage=searchResultPage.pickGiftCard(Constants.giftCardItem);
+         giftCardPage=searchResultPage.pickGiftCardByBusinessName(Constants.giftCardItem);
     }
-    @Test(priority = 1)
-    public void insertAmount(){
-        whoToSendPage=giftCardPage.insertAmount(Constants.amount);
-        AssertionHelper.verifyTrue(whoToSendPage.isResultPageHeaderDisplay());
+
+    @Test(priority = 1,enabled = false)
+    public void verifyGiftCardHeaderTest(){
+      AssertionHelper.verifyTrue(giftCardPage.getGiftCardHeader().contains(Constants.giftCardItem));
     }
+    @Test(priority = 2,enabled = false)
+    public void readMoreAboutProduct() throws InterruptedException {
+      giftCardPage.setReadMore();
+    }
+    @Test(priority = 3,enabled = false)
+    public void VerifyMoneyBox() throws InterruptedException {
+        giftCardPage.enterAmount(Constants.amount);
+
+    }
+    @Test(priority = 4)
+    public void catchingJSErrorOnBlankMoneyBox(){;
+        AssertionHelper.verifyTrue(giftCardPage.verifyJSError());
+    }
+
 }

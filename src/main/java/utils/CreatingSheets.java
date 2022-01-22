@@ -21,8 +21,19 @@ public class CreatingSheets {
         ex = new ExcelHelper(ResourceHelper.getResourcePath("src/main/resources/dataprovider/Book1.xlsx"));
         //   createAccountAndAddToSheet();
         //    createCartSheet();
+        createTestSheet();
 
 
+    }
+    public static void createTestSheet(){
+        String sheet="tests";
+        String test="test";
+        String status="status";
+       if(!ex.isSheetExist("Tests")){
+           ex.addSheet(sheet);
+           ex.addColumn(sheet,test);
+           ex.addColumn(sheet,status);
+       }
     }
 
     public static void insertUserData(UserData ud) {

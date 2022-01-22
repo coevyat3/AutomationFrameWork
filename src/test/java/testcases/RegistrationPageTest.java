@@ -2,7 +2,6 @@ package testcases;
 
 import buymeObjects.*;
 import com.aventstack.extentreports.Status;
-import helper.assertion.AssertionHelper;
 import helper.logger.LoggerHelper;
 import helper.resource.ResourceHelper;
 import org.apache.log4j.Logger;
@@ -32,7 +31,7 @@ public class RegistrationPageTest extends TestBase {
     @Parameters({"browser"})
     @BeforeMethod(alwaysRun = true)
     public void setup(Method method,String browser) throws Exception {
-        Loader(browser);
+        loadConfig(browser);
             registerPage= new RegisterPage(driver);
             navBarPage= new NavBarPage(driver);
             searchResultPage= new SearchResultPage(driver);
@@ -41,7 +40,7 @@ public class RegistrationPageTest extends TestBase {
             howToSendPage= new HowToSendPage(driver);
             loginPage= new LoginPage(driver);
             searchResultPage= navBarPage.pickItem(Constants.amount,Constants.area,Constants.category);
-            giftCardPage=searchResultPage.pickGiftCard(Constants.giftCardItem);
+            giftCardPage=searchResultPage.pickGiftCardByBusinessName(Constants.giftCardItem);
             whoToSendPage= giftCardPage.insertAmount(Constants.amount);
             howToSendPage= whoToSendPage.sendAll(Constants.FriendName,Constants.Bless,Constants.OwnBless, ResourceHelper.getResourcePath("src/main/resources/photos/flower.jpg"));
             loginPage=howToSendPage.sendAll(Constants.email,Constants.giftSender);

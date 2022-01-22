@@ -27,6 +27,19 @@ public class VerificationHelper {
         }
 
     }
+    public boolean isSelected(WebElement element) {
+        try {
+            element.isSelected();
+            log.info("Element is present " + element);
+            TestBase.logExtentReport("element is selected"+element.getText());
+            return true;
+        } catch (Exception e) {
+            e.printStackTrace();
+            log.info("Element is not Selected " + e.getCause());
+            return false;
+        }
+
+    }
 
     public boolean isNotDisplayed(WebElement element) {
         try {

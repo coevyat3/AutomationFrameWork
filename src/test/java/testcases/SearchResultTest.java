@@ -2,44 +2,48 @@ package testcases;
 
 import helper.assertion.AssertionHelper;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Parameters;
 import testBase.TestBase;
 import org.testng.annotations.Test;
 import buymeObjects.*;
-import utils.ReadingSheets;
 
 import java.lang.reflect.Method;
-import java.util.ArrayList;
-import java.util.Iterator;
 
 public class SearchResultTest extends TestBase {
     NavBarPage navBarPage;
     SearchResultPage searchResultPage;
     GiftCardPage giftCardPage;
+    HomePage homePage;
 
     @Parameters({"browser"})
     @BeforeMethod(alwaysRun = true)
     public void setup(Method method, String browser) throws Exception {
-        Loader(browser);
+        loadConfig(browser);
+        homePage= new HomePage(driver);
         navBarPage= new NavBarPage(driver);
         searchResultPage= new SearchResultPage(driver);
-        searchResultPage= navBarPage.pickItem(Constants.amount,Constants.area,Constants.category);
-        giftCardPage= new GiftCardPage(driver);
+
     }
 
-    @Test(priority = 1)
+    @Test(priority = 1,description = "Pick A gift Card from NavBar")
     public void verifySearchResultHeaderPage() {
+        searchResultPage= navBarPage.pickItem(Constants.amount,Constants.area,Constants.category);
         AssertionHelper.verifyTrue(searchResultPage.getSearchResultTextHeader().contains(Constants.amount));
         AssertionHelper.verifyTrue(searchResultPage.getSearchResultTextHeader().contains(Constants.category));
         AssertionHelper.verifyTrue(searchResultPage.getSearchResultTextHeader().contains(Constants.area));
 
     }
-    @Test(priority = 2)
-    public void pickGiftCardFromSearchResultPage()  {
-        giftCardPage=searchResultPage.pickGiftCard(Constants.giftCardItem);
-        AssertionHelper.verifyTrue(giftCardPage.getGiftCardHeader().contains(Constants.giftCardItem));
+    @Test(priority = 2,description = "Pick Gift Card from Top categories")
+    public void pickGiftCardFromTopCategories()  {
+        homePage.pickGiftFromTopCategories(Constants.birthDayCategory);
+        AssertionHelper.verifyTrue(searchResultPage.getSearchResultTextHeader().contains(Constants.birthDayCategory));
     }
+    @Test(priority = 3,description = "Pick gift Card from main Categories")
+    public void pickGiftFromMainCategories(){
+        homePage.pickGiftFromMainCategory(Constants.category);
+        AssertionHelper.verifyTrue(searchResultPage.getSearchResultTextHeader().contains(Constants.category));
+    }
+
 
 
 

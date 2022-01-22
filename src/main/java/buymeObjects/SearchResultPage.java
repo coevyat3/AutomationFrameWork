@@ -23,7 +23,6 @@ public class SearchResultPage {
         this.driver=driver;
         PageFactory.initElements(driver,this);
 
-
     }
     @FindBy(css=".title-xxl")
     private WebElement searchResultHeader;
@@ -43,7 +42,7 @@ public class SearchResultPage {
         test.log(Status.INFO,"Verifying Search Result Page Header text: "+searchResultHeader.getText());
         return searchResultHeader.getText();
     }
-    public GiftCardPage pickGiftCard(String txt){
+    public GiftCardPage pickGiftCardByBusinessName(String txt){
         log.info("Picking Gift Card  From search Result Page "+txt);
         test.log(Status.INFO,"Picking gift card from search Result page "+txt);
      for(WebElement element:giftCard){
