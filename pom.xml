@@ -80,6 +80,7 @@
                     <suiteXmlFiles>
                         <suiteXmlFile>testall.xml</suiteXmlFile>
                         <suiteXmlFile>datadriven.xml</suiteXmlFile>
+                        <suiteXmlFile>EndToEnd.xml</suiteXmlFile>
                     </suiteXmlFiles>
 
                 </configuration>

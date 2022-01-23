@@ -73,6 +73,8 @@ public class LoginPage {
         return new VerificationHelper(driver).isDisplayed(loginPageHeader);
     }
     public PaymentPage login(String email,String password){
+        log.info("Set email to: "+email);
+        test.log(Status.INFO,"Set password to: "+password);
         setEmail(email);
         setPassword(password);
         clickLoginBtn();

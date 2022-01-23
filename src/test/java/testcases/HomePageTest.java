@@ -32,7 +32,7 @@ public class HomePageTest extends TestBase {
       AssertionHelper.verifyTrue(homePage.getSiteUrl().equals(Constants.URL));
 
     }
-    @Test(priority = 2,description = "verify HomePage title" )
+    @Test(priority = 2,description = "verify HomePage title")
     public void verifyHomePageTitle(){
         AssertionHelper.verifyTrue(homePage.getHomePageTitle().contains(Constants.HomePageTitle));
     }

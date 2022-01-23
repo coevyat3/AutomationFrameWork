@@ -40,7 +40,7 @@ public class TestBase {
     private Logger log= LoggerHelper.getLogger(testBase.TestBase.class);
     private static File reportDirect;
     protected ExcelHelper ex;
-    protected String sheetName="test";
+    protected String sheetName="testVol2";
     protected String sheetColStatus="status";
     protected String sheetColTest="test";
 
@@ -51,12 +51,6 @@ public class TestBase {
     @BeforeSuite(alwaysRun = true)
     public void beforeSuite() {
         extent = ExtentManager.getInstance();
-        ex = new ExcelHelper(ResourceHelper.getResourcePath("src/main/resources/dataprovider/Book1.xlsx"));
-        if(!ex.isSheetExist(sheetName)){
-            ex.addSheet(sheetName);
-            ex.addColumn(sheetName,sheetColTest);
-            ex.addColumn(sheetName,sheetColStatus);
-        }
 
     }
 
@@ -67,13 +61,19 @@ public class TestBase {
         setUpDriver(BrowserType.valueOf(browser));
         test = extent.createTest(getClass().getSimpleName());
         driver.get(ObjectReader.reader.getUrl());
+        ex = new ExcelHelper(ResourceHelper.getResourcePath("src/main/resources/dataprovider/Book1.xlsx"));
+        if(!ex.isSheetExist(sheetName)){
+            ex.addSheet(sheetName);
+            ex.addColumn(sheetName,sheetColTest);
+            ex.addColumn(sheetName,sheetColStatus);
+        }
+
     }
 
 
 
 
     @AfterMethod(alwaysRun = true)
-
     public void afterMethod(ITestResult result, Method method) throws IOException{
         int row=ex.getRowCount(sheetName);
         if(result.getStatus() == ITestResult.FAILURE){

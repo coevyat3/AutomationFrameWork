@@ -104,9 +104,11 @@ public class HowToSendPage {
     }
 
     public boolean checkNowBox(){
-        return nowCheckBox.isSelected();
+        return new VerificationHelper(driver).isSelected(nowCheckBox);
     }
     public void setDate(String month,String day){
+        log.info(" Click on Sent gift later");
+        test.log(Status.INFO,"Click on sent Gift Later");
         laterCheckBox.click();
         clickDate.click();
         while(true){
@@ -117,6 +119,9 @@ public class HowToSendPage {
             }
 
         }
+        log.info("set date to month: "+month +" Day: "+day);
+        test.log(Status.INFO,"Set month to: "+month+" Set day to: "+day);
+
         for(WebElement d:days){
             String str=d.getText();
             if(str.equalsIgnoreCase(day)){
@@ -124,18 +129,22 @@ public class HowToSendPage {
                 break;
             }
         }
+
     }
     public boolean getWarnMsg(){
        return new VerificationHelper(driver).isDisplayed(sendLaterWarnMsg);
     }
     public void setHour(String hour){
         clickHour.click();
+        log.info("Set hour to: "+hour);
+        test.log(Status.INFO,"set hour to: "+hour);
         for(WebElement h:this.hour){
             if(h.getText().equalsIgnoreCase(hour)){
                 h.click();
                 break;
             }
         }
+
     }
 
 }

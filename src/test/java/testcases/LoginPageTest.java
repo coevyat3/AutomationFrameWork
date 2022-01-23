@@ -40,7 +40,7 @@ public class LoginPageTest extends TestBase {
 
     }
     @Test()
-    public void testLogin() throws InterruptedException {
+    public void testLogin()  {
         loginPage= new LoginPage(driver);
         searchResultPage= navBarPage.pickItem(Constants.amount,Constants.area,Constants.category);
         giftCardPage=searchResultPage.pickGiftCardByBusinessName(Constants.giftCardItem);
