@@ -12282,3 +12282,37 @@
 2022-01-23 20:20:45,070 - helper.wait.WaitHelper -INFO - WaitHelper object created..
 2022-01-23 20:20:45,070 - buymeObjects.LoginPage -INFO - Set email to: a1b1c1@xyz.com
 2022-01-23 20:20:45,831 - testBase.TestBase -INFO - **************testLoginFinished***************
+2022-01-23 21:16:18,576 - testBase.TestBase -INFO - Internalize Web driver 1196836564
+2022-01-23 21:16:18,580 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-23 21:16:18,582 - helper.wait.WaitHelper -INFO - Implicit Wait has been set to: 20
+2022-01-23 21:16:18,591 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-23 21:16:20,210 - testcases.HomePageTest -INFO - **************verifySiteURLStarted***************
+2022-01-23 21:16:20,211 - buymeObjects.HomePage -INFO - Return homePage URL
+2022-01-23 21:16:21,108 - testBase.TestBase -INFO - Internalize Web driver 734518153
+2022-01-23 21:16:21,109 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-23 21:16:21,109 - helper.wait.WaitHelper -INFO - Implicit Wait has been set to: 20
+2022-01-23 21:16:21,113 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-23 21:16:21,703 - testcases.HomePageTest -INFO - **************verifyHomePageTitleStarted***************
+2022-01-23 21:16:21,707 - testBase.TestBase -INFO - **************nullFinished***************
+2022-01-23 21:16:22,732 - testBase.TestBase -INFO - Internalize Web driver 1328954045
+2022-01-23 21:16:22,732 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-23 21:16:22,732 - helper.wait.WaitHelper -INFO - Implicit Wait has been set to: 20
+2022-01-23 21:16:22,735 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-23 21:16:23,513 - testcases.HomePageTest -INFO - **************verifyLogoPresentStarted***************
+2022-01-23 21:16:23,517 - testBase.TestBase -INFO - **************nullFinished***************
+2022-01-23 21:16:24,302 - testBase.TestBase -INFO - Internalize Web driver 1123830468
+2022-01-23 21:16:24,302 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-23 21:16:24,302 - helper.wait.WaitHelper -INFO - Implicit Wait has been set to: 20
+2022-01-23 21:16:24,304 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-23 21:16:35,926 - testBase.TestBase -INFO - Internalize Web driver 1221433900
+2022-01-23 21:16:35,930 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-23 21:16:35,932 - helper.wait.WaitHelper -INFO - Implicit Wait has been set to: 20
+2022-01-23 21:16:35,939 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-23 21:16:52,351 - testBase.TestBase -INFO - Internalize Web driver 745205026
+2022-01-23 21:16:52,359 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-23 21:16:52,362 - helper.wait.WaitHelper -INFO - Implicit Wait has been set to: 20
+2022-01-23 21:16:52,375 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-23 21:16:55,898 - testBase.TestBase -INFO - Internalize Web driver 406180845
+2022-01-23 21:16:55,899 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-23 21:16:55,899 - helper.wait.WaitHelper -INFO - Implicit Wait has been set to: 20
+2022-01-23 21:16:55,905 - helper.wait.WaitHelper -INFO - WaitHelper object created..

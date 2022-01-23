@@ -158,7 +158,7 @@ public class TestBase {
         String screen = captureScreen("", driver);
         try {
             test.addScreenCaptureFromPath(screen);
-        } catch (IOException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
