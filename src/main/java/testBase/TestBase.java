@@ -40,7 +40,7 @@ public class TestBase {
     private Logger log= LoggerHelper.getLogger(testBase.TestBase.class);
     private static File reportDirect;
     protected ExcelHelper ex;
-    protected String sheetName="testVol2";
+    protected String sheetName="testVol3";
     protected String sheetColStatus="status";
     protected String sheetColTest="test";
 
@@ -82,6 +82,7 @@ public class TestBase {
             test.addScreenCaptureFromPath(imagePath);
             ex.setCellData(sheetName,sheetColTest,row+1,method.getName());
             ex.setCellData(sheetName,sheetColStatus,row+1, "fail");
+
         }
         else if(result.getStatus() == ITestResult.SUCCESS){
             test.log(Status.PASS, result.getName()+" is pass");

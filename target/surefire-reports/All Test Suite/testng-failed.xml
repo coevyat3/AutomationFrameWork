@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [All Test Suite]" guice-stage="DEVELOPMENT" verbose="0">
+  <test thread-count="5" name="C:/Users/coevy/IdeaProjects/BuyMeAutoV3(failed)" verbose="0">
+    <parameter name="browser" value="CHROME"/>
+    <classes>
+      <class name="testcases.LoginPageTest">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="beforeSuite"/>
+          <include name="testLogin"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- testcases.LoginPageTest -->
+    </classes>
+  </test> <!-- C:/Users/coevy/IdeaProjects/BuyMeAutoV3(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

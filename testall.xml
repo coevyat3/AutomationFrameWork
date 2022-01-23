@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/coevy/IdeaProjects/BuyMeAutoV3">
+        <parameter name="browser" value="CHROME"></parameter>
+       <classes>
+<!--           <class name="testcases.HomePageTest"></class>-->
+<!--           <class name="testcases.NavBarPageTest"></class>-->
+<!--           <class name="testcases.SearchResultTest"></class>-->
+<!--           <class name="testcases.GiftCardPageTest"></class>-->
+<!--           <class name="testcases.WhoToSendPageTest"></class>-->
+<!--           <class name="testcases.HowToSendPageTest"></class>-->
+           <class name="testcases.LoginPageTest"></class>
+<!--           <class name="testcases.EndToEnd"></class>-->
+       </classes>
+    </test>
+</suite>

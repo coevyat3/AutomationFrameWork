@@ -39,18 +39,18 @@ public class LoginPageTest extends TestBase {
         paymentPage=new PaymentPage(driver);
 
     }
-    @Test()
+    @Test
     public void testLogin()  {
         loginPage= new LoginPage(driver);
         searchResultPage= navBarPage.pickItem(Constants.amount,Constants.area,Constants.category);
         giftCardPage=searchResultPage.pickGiftCardByBusinessName(Constants.giftCardItem);
         whoToSendPage= giftCardPage.insertAmount(Constants.amount);
         howToSendPage= whoToSendPage.sendAll(Constants.FriendName,Constants.Bless,Constants.OwnBless, ResourceHelper.getResourcePath("src/main/resources/photos/flower.jpg"));
-        loginPage= howToSendPage.sendAll("יולי","21","13:30","s1@walla.com","aaaaa");
+        loginPage= howToSendPage.sendAll("יולי","21","13:30","s1@walla.com","me");
         loginPage.login(Constants.email,Constants.password);
 
     }
-    @Test(groups = {"dataDrivenTest"},dataProvider ="loginData",enabled = false )
+    @Test(groups = {"dataDrivenTest"},dataProvider ="loginData" )
     public void doLogin(String email,String password){
       homePage.gotoLogin();
       loginPage.doLogin(email,password);

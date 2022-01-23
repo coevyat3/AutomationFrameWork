@@ -31,6 +31,7 @@ public class HomePageTest extends TestBase {
     public void verifySiteURL(){
       AssertionHelper.verifyTrue(homePage.getSiteUrl().equals(Constants.URL));
 
+
     }
     @Test(priority = 2,description = "verify HomePage title")
     public void verifyHomePageTitle(){
