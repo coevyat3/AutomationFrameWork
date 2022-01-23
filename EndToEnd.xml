@@ -5,7 +5,7 @@
         <parameter name="browser" value="CHROME"></parameter>
    <classes>
        
-   <class name="testcases.EndToEnd"></class>
+            <class name="testcases.EndToEnd"></class>
    </classes>
            
     </test>

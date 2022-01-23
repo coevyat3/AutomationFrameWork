@@ -104,13 +104,13 @@ public class TestBase {
 
     public WebDriver getBrowserObject(BrowserType type) throws Exception{
         try{
-            switch (type){
-                case CHROME -> {
-                    ChromeBrowser chrome= new ChromeBrowser().getClass().getDeclaredConstructor().newInstance();
-                    ChromeOptions options=chrome.getChromeOptions();
+            switch (type) {
+                case CHROME:
+                    ChromeBrowser chrome = new ChromeBrowser().getClass().getDeclaredConstructor().newInstance();
+                    ChromeOptions options = chrome.getChromeOptions();
                     return chrome.getChromeDriver(options);
-                }
-                default -> throw new Exception("driver Not Found"+type.name());
+
+                default : throw new Exception("driver Not Found"+type.name());
             }
         }catch (Exception e){
             log.info(e.getMessage());

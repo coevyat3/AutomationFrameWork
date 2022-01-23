@@ -84,8 +84,6 @@
                 <version>3.0.0-M4</version>
                 <configuration>
                     <suiteXmlFiles>
-                        <suiteXmlFile>testall.xml</suiteXmlFile>
-                        <suiteXmlFile>datadriven.xml</suiteXmlFile>
                         <suiteXmlFile>EndToEnd.xml</suiteXmlFile>
                     </suiteXmlFiles>
                     <systemPropertyVariables>

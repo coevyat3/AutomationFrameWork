@@ -32,6 +32,7 @@ public class SearchResultTest extends TestBase {
         AssertionHelper.verifyTrue(searchResultPage.getSearchResultTextHeader().contains(Constants.category));
         AssertionHelper.verifyTrue(searchResultPage.getSearchResultTextHeader().contains(Constants.area));
 
+
     }
     @Test(priority = 2,description = "Pick Gift Card from Top categories")
     public void pickGiftCardFromTopCategories()  {
