@@ -33,12 +33,34 @@ public class HowToSendPageTest extends TestBase {
         giftCardPage=searchResultPage.pickGiftCardByBusinessName(Constants.giftCardItem);
         whoToSendPage= giftCardPage.insertAmount(Constants.amount);
         howToSendPage= whoToSendPage.sendAll(Constants.FriendName,Constants.Bless,Constants.OwnBless, ResourceHelper.getResourcePath("src/main/resources/photos/flower.jpg"));
+        loginPage= new LoginPage(driver);
 
     }
-    @Test(priority = 3)
-    public void sendAll(){
-        howToSendPage.sendAll(Constants.email,Constants.giftSender);
-        AssertionHelper.verifyTrue(loginPage.getLoginPageHeader());
+    @Test(priority = 1,enabled = false)
+    public void verifyHowToSendPageHeader(){
+        AssertionHelper.verifyText(howToSendPage.getPageHeader(),Constants.howToSendPageHeader);
     }
+    @Test(priority = 2,enabled = false)
+    public void sendLaterOptionDateAndHour(){
+        howToSendPage.setDate("יולי","13");
+        howToSendPage.setHour("12:30");
+        AssertionHelper.verifyTrue(howToSendPage.getWarnMsg());
+    }
+    @Test(priority = 3,enabled = false)
+    public void selectSendByMail(){
+        howToSendPage.setClickEmail();
+        howToSendPage.setInsertEmail("a1@gmail.com");
+    }
+    @Test(priority = 4,enabled = false)
+    public void setSenderName(){
+        howToSendPage.setInsertName("aaaa");
+    }
+    @Test(priority = 5)
+    public void setWhoToSendPage() throws InterruptedException {
+        howToSendPage.sendAll("יולי","21","13:30","s1@walla.com","aaaaa");
+        AssertionHelper.verifyTrue(loginPage.getLoginPageHeader());
+        Thread.sleep(4000);
+    }
+
 
 }

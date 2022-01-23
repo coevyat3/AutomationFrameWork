@@ -9,6 +9,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 import static testBase.TestBase.test;
 
 public class HowToSendPage {
@@ -18,6 +20,9 @@ public class HowToSendPage {
         this.driver=driver;
         PageFactory.initElements(driver,this);
     }
+   @FindBy(css = "div.step.active >div.label")
+   private WebElement header;
+
     @FindBy(css = "svg[gtm*='email']")
     private WebElement clickEmail;
 
@@ -36,13 +41,47 @@ public class HowToSendPage {
     @FindBy(css="div[class*=selected]")
     private WebElement nowCheckBox;
 
-    public LoginPage sendAll(String email,String name){
+    @FindBy(css="div[class*='button-later']")
+    private WebElement laterCheckBox;
+
+    @FindBy(css="div.display-date")
+    private WebElement clickDate;
+
+    @FindBy(css="span.selected-month-name")
+    private WebElement setMonth;
+
+    @FindBy(css = "span.selected-text")
+    private WebElement clickHour;
+
+    @FindBy(css="div.dropdown ul[style] li")
+    private List<WebElement> hour;
+
+
+    @FindBy(css="svg.icon.chevron_next_rtl")
+    private WebElement searchMonth;
+
+    @FindBy(css="span.ember-view.bm-date-day:not(.disabled)")
+    private List<WebElement> days;
+
+    @FindBy(css="span.notification")
+    private WebElement sendLaterWarnMsg;
+
+
+    public String getPageHeader(){
+        return new VerificationHelper(driver).getText(header);
+    }
+
+
+    public LoginPage sendAll(String month,String day,String hour,String email,String name){
+          setDate(month,day);
+          setHour(hour);
           setClickEmail();
           setInsertEmail(email);
           setInsertName(name);
           clickBtn();
           return new LoginPage(driver);
     }
+
     public void setClickEmail(){
         log.info("Pick Send with email");
         test.log(Status.INFO,"Pick send with email");
@@ -63,15 +102,40 @@ public class HowToSendPage {
         test.log(Status.INFO,"Click Button "+btn.getAttribute("gtm"));
         btn.click();
     }
-    public String getWhoToSendPageHeaderText(){
-       return  new VerificationHelper(driver).getText(whoToSendPageHeader);
-    }
-    public boolean getWhoToSendPageHeader(){
-        log.info("Verify who to send page Header display: "+whoToSendPageHeader.isDisplayed());
-        test.log(Status.INFO,"Verify who to send Page header display "+whoToSendPageHeader.isDisplayed());
-        return new VerificationHelper(driver).isDisplayed(whoToSendPageHeader);
-    }
+
     public boolean checkNowBox(){
         return nowCheckBox.isSelected();
     }
+    public void setDate(String month,String day){
+        laterCheckBox.click();
+        clickDate.click();
+        while(true){
+            if(setMonth.getText().equalsIgnoreCase(month)){
+                 break;
+            }else{
+                searchMonth.click();
+            }
+
+        }
+        for(WebElement d:days){
+            String str=d.getText();
+            if(str.equalsIgnoreCase(day)){
+                d.click();
+                break;
+            }
+        }
+    }
+    public boolean getWarnMsg(){
+       return new VerificationHelper(driver).isDisplayed(sendLaterWarnMsg);
+    }
+    public void setHour(String hour){
+        clickHour.click();
+        for(WebElement h:this.hour){
+            if(h.getText().equalsIgnoreCase(hour)){
+                h.click();
+                break;
+            }
+        }
+    }
+
 }

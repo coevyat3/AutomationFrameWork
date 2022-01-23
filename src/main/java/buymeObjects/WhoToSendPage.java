@@ -1,7 +1,6 @@
 package buymeObjects;
 
 import com.aventstack.extentreports.Status;
-import helper.assertion.AssertionHelper;
 import helper.browserConfiguration.config.ObjectReader;
 import helper.logger.LoggerHelper;
 import helper.verification.VerificationHelper;
@@ -42,8 +41,6 @@ public class WhoToSendPage {
     @FindBy(css = "button[type='submit']")
     private WebElement btn;
 
-    @FindBy(css = "h1.bm-h1")
-    private WebElement searchResultPageHeader;
 
     @FindBy(css="div[class*=forSomeone]")
     private WebElement someoneElse;
@@ -63,17 +60,20 @@ public class WhoToSendPage {
     @FindBy(css = "div[class*='mx-6']>button")
     private WebElement confirmPriceChange;
 
+    @FindBy(css="div.step.active>div.label")
+    private WebElement header;
+
     public HowToSendPage sendAll(String t,String a,String b,String photo){
         new WaitHelper(driver).waitForElement(friendName, ObjectReader.reader.getExplicitWait());
         setFriendName(t);
         selectedBlessClick.click();
-        click(a);
+        pickBless(a);
         sendBlessText(b);
         sendPhoto(photo);
         clickBtn();
         return new HowToSendPage(driver);
     }
-    public void click(String txt){
+    public void pickBless(String txt){
         for(WebElement element:blessPool){
             if(element.getText().contains(txt)){
                 element.click();
@@ -82,6 +82,9 @@ public class WhoToSendPage {
                 break;
             }
         }
+    }
+    public void clickOnBlessDropdown(){
+        selectedBlessClick.click();
     }
     public void setFriendName(String txt){
         log.info("Send friend name into textBox: "+txt);
@@ -105,15 +108,15 @@ public class WhoToSendPage {
         btn.click();
     }
     public boolean isResultPageHeaderDisplay(){
-        log.info("Verify  Who to send Page header status "+ searchResultPageHeader.isDisplayed());
-        test.log(Status.INFO,"Verify  Who to send Page header status "+ searchResultPageHeader.isDisplayed());
-        return new VerificationHelper(driver).isDisplayed(searchResultPageHeader);
+        log.info("Verify  Who to send Page header status "+ header.isDisplayed());
+        test.log(Status.INFO,"Verify  Who to send Page header status "+ header.isDisplayed());
+        return new VerificationHelper(driver).isDisplayed(header);
 
     }
     public String getResultPageHeaderText(){
-        log.info("Verify  Who to send Page header text "+ searchResultPageHeader.getText());
-        test.log(Status.INFO,"Verify  Who to send Page header text "+ searchResultPageHeader.getText());
-        return new VerificationHelper(driver).getText(searchResultPageHeader);
+        log.info("Verify  Who to send Page header text "+ header.getText());
+        test.log(Status.INFO,"Verify  Who to send Page header text "+ header.getText());
+        return new VerificationHelper(driver).getText(header);
     }
     public boolean someoneElse(){
         return new VerificationHelper(driver).isSelected(someoneElse);

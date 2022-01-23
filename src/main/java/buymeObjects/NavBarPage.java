@@ -113,7 +113,7 @@ public class NavBarPage {
                 actions.moveToElement(element).perform();
                 element.click();
                 log.info("Search gift from textBox with auto complete suggest pick "+txt +" and target text search is"+ s  );
-                test.log(Status.INFO,"Search gift from textBox with autocomplete pick "+txt + "and target text search is"+ s);
+                test.log(Status.INFO,"Search gift from textBox with autocomplete pick "+txt + " and target text search is"+ s);
                 break;
             }
 

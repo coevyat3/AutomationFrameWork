@@ -26,10 +26,10 @@ public class CreatingSheets {
 
     }
     public static void createTestSheet(){
-        String sheet="tests";
+        String sheet="tests11";
         String test="test";
         String status="status";
-       if(!ex.isSheetExist("Tests")){
+       if(!ex.isSheetExist(sheet)){
            ex.addSheet(sheet);
            ex.addColumn(sheet,test);
            ex.addColumn(sheet,status);

@@ -1,6 +1,7 @@
 package buymeObjects;
 
 import com.aventstack.extentreports.Status;
+import helper.browserConfiguration.config.ObjectReader;
 import helper.logger.LoggerHelper;
 import helper.verification.VerificationHelper;
 import helper.wait.WaitHelper;
@@ -15,10 +16,12 @@ import static testBase.TestBase.test;
 public class LoginPage {
     private WebDriver driver;
     private Logger log= LoggerHelper.getLogger(LoginPage.class);
+    WaitHelper waitHelper;
 
     public LoginPage(WebDriver driver){
         this.driver=driver;
         PageFactory.initElements(driver,this);
+        waitHelper= new WaitHelper(driver);
 
     }
     @FindBy(css = "div[class*='oldschool'] input[type='email']")
@@ -35,6 +38,10 @@ public class LoginPage {
 
     @FindBy(css = "h1.bm-h1")
     private WebElement loginPageHeader;
+
+
+    @FindBy(css="div.step.active>div:nth-child(1)")
+    private WebElement paymentPageHeader;
 
 
     public HomePage doLogin(String email,String password){
@@ -61,11 +68,15 @@ public class LoginPage {
     public void clickRegisterBtn(){
         registerBtn.click();
     }
-    public String getLoginPageHeaderText(){
-        return new VerificationHelper(driver).getText(loginPageHeader);
-    }
+
     public boolean getLoginPageHeader(){
         return new VerificationHelper(driver).isDisplayed(loginPageHeader);
+    }
+    public PaymentPage login(String email,String password){
+        setEmail(email);
+        setPassword(password);
+        clickLoginBtn();
+        return new PaymentPage(driver);
     }
 
 

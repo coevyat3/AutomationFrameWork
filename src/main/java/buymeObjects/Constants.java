@@ -25,7 +25,8 @@ public class Constants {
     //pagesHeaders
     public static final String loginHeader="כניסה";
     public static final String registerHeader="הרשמה";
-    public static final String whoToSendPageHeader="רכישת מתנה";
+    public static final String whoToSendPageHeader="למי לשלוח";
+    public static final String howToSendPageHeader="איך לשלוח";
 
     //GiftCardPage
     public static final String giftCardItem="CASTRO";
@@ -40,5 +41,6 @@ public class Constants {
 
     //HowToSendPage
     public static final String giftSender="tester01";
+    public static final String sendLaterWarnMsg="בשליחה במועד מאוחר יותר, לא ניתן לשלוח בוואטסאפ";
 
 }

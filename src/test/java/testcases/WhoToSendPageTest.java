@@ -29,21 +29,35 @@ public class WhoToSendPageTest extends TestBase {
         searchResultPage= navBarPage.pickItem(Constants.amount,Constants.area,Constants.category);
         giftCardPage=searchResultPage.pickGiftCardByBusinessName(Constants.giftCardItem);
         whoToSendPage= giftCardPage.insertAmount(Constants.amount);
-        AssertionHelper.verifyTrue(whoToSendPage.isResultPageHeaderDisplay()); // verify if we landed in the right webPage
-        AssertionHelper.verifyText(whoToSendPage.getResultPageHeaderText(),Constants.whoToSendPageHeader); //same verification
+
 
     }
-    @Test(priority = 1,enabled = false)
+    @Test(priority = 0)
+    public void verifyWhoToSendPage(){
+        AssertionHelper.verifyTrue(whoToSendPage.isResultPageHeaderDisplay());
+        AssertionHelper.verifyText(whoToSendPage.getResultPageHeaderText(),Constants.whoToSendPageHeader);
+    }
+    @Test(priority = 1)
     public void VerifySomeoneElseCheckBox()  {
     AssertionHelper.verifyTrue(whoToSendPage.someoneElse());
     }
-    @Test(priority = 2,enabled = false)
+    @Test(priority = 2)
     public void verifyForMySelfCheckBoxImgResponse(){
        AssertionHelper.verifyTrue(whoToSendPage.clickOnMySelfCheckBox());
     }
     @Test(priority = 3)
     public void verifyGiftPriceChange(){
      AssertionHelper.verifyText(whoToSendPage.changeGiftPrice("501"),"501" );
+    }
+    @Test(priority = 4)
+    public void setWhoToSendPage(){
+        AssertionHelper.verifyTrue(whoToSendPage.someoneElse());
+        whoToSendPage.setFriendName(Constants.FriendName);
+        whoToSendPage.clickOnBlessDropdown();
+        whoToSendPage.pickBless(Constants.Bless);
+        whoToSendPage.sendBlessText(Constants.OwnBless);
+        whoToSendPage.sendPhoto(ResourceHelper.getResourcePath("src/main/resources/photos/flower.jpg"));
+
     }
 
 }

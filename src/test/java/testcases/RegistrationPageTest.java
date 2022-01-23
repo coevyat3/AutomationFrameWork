@@ -43,7 +43,7 @@ public class RegistrationPageTest extends TestBase {
             giftCardPage=searchResultPage.pickGiftCardByBusinessName(Constants.giftCardItem);
             whoToSendPage= giftCardPage.insertAmount(Constants.amount);
             howToSendPage= whoToSendPage.sendAll(Constants.FriendName,Constants.Bless,Constants.OwnBless, ResourceHelper.getResourcePath("src/main/resources/photos/flower.jpg"));
-            loginPage=howToSendPage.sendAll(Constants.email,Constants.giftSender);
+     //       loginPage=howToSendPage.sendAll(Constants.email,Constants.giftSender);
             registerPage=loginPage.gotoRegister();
             test.log(Status.INFO, method.getName()+"**************test started***************");
             log.info("**************"+method.getName()+"Started***************");

@@ -49,7 +49,7 @@ public class ExcelHelper {
 	 * 
 	 * @author NaveenKhunteta
 	 * @param sheetName
-	 * @param colNum
+
 	 * @param rowNum
 	 * @return
 	 */
@@ -370,30 +370,7 @@ public class ExcelHelper {
 
 	}
 
-	// String sheetName, String testCaseName,String keyword ,String URL,String
-	// message
-	// public boolean addHyperLink(String sheetName,String
-	// screenShotColName,String testCaseName,int index,String url,String
-	// message){
-	// //System.out.println("ADDING addHyperLink******************");
-	//
-	// url=url.replace('\\', '/');
-	// if(!isSheetExist(sheetName))
-	// return false;
-	//
-	// sheet = workbook.getSheet(sheetName);
-	//
-	// for(int i=2;i<=getRowCount(sheetName);i++){
-	// if(getCellData(sheetName, 0, i).equalsIgnoreCase(testCaseName)){
-	// //System.out.println("**caught "+(i+index));
-	// setCellData(sheetName, screenShotColName, i+index, message,url);
-	// break;
-	// }
-	// }
-	//
-	//
-	// return true;
-	// }
+
 	public int getCellRowNum(String sheetName, String colName, String cellValue) {
 
 		for (int i = 2; i <= getRowCount(sheetName); i++) {

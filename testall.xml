@@ -3,9 +3,10 @@
 <suite name="All Test Suite">
     <test verbose="2" preserve-order="true" name="EndToEndTest">
         <parameter name="browser" value="CHROME"></parameter>
-      <classes>
-          <class name="testcases.WhoToSendPageTest"></class>
-      </classes>
+   <classes>
+       
+   <class name="testcases.EndToEnd"></class>
+   </classes>
            
     </test>
 </suite>
