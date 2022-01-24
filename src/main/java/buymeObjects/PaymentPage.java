@@ -19,7 +19,7 @@ public class PaymentPage extends TestBase {
     Logger log= LoggerHelper.getLogger(PaymentPage.class);
     public PaymentPage(){
 
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(getDriver(),this);
     }
     @FindBy(css="div.total-price")
     private WebElement pageHeader;
@@ -28,8 +28,8 @@ public class PaymentPage extends TestBase {
     public boolean getPageTitleText(){
         log.info("Verify Payment Page title "+pageHeader.getText());
         test.log(Status.INFO,"Verify Payment page title "+pageHeader.getText());
-        new WaitHelper(driver).waitForElement(pageHeader, ObjectReader.reader.getExplicitWait());
-        return new VerificationHelper(driver).isDisplayed(pageHeader);
+        new WaitHelper(getDriver()).waitForElement(pageHeader, ObjectReader.reader.getExplicitWait());
+        return new VerificationHelper(getDriver()).isDisplayed(pageHeader);
     }
 
 }

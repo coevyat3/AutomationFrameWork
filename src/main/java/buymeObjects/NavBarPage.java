@@ -23,7 +23,7 @@ public class NavBarPage extends TestBase {
     private Logger log= LoggerHelper.getLogger(NavBarPage.class);
 
     public NavBarPage(){
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(getDriver(),this);
 
 
     }
@@ -59,7 +59,7 @@ public class NavBarPage extends TestBase {
     public void clickAmount(){
         log.info("Waiting for element "+ list.get(0)+" To be clickable" );
         test.log(Status.INFO,"Waiting for element "+ list.get(0).getText()+" To be clickable");
-        new WaitHelper(driver).WaitForElementClickable(list.get(0),ObjectReader.reader.getExplicitWait() );
+        new WaitHelper(getDriver()).WaitForElementClickable(list.get(0),ObjectReader.reader.getExplicitWait() );
         log.info("Click on Amount navBar Btn: "+list.get(0).getText() );
         test.log(Status.INFO,"Click on Amount navBar Btn: "+list.get(0).getText());
         list.get(0).click();
@@ -81,7 +81,7 @@ public class NavBarPage extends TestBase {
         for(WebElement element:list2){
             if(element.getText().contains(value)){
                 element.click();
-                 new VerificationHelper(driver).isSelected(element);
+                 new VerificationHelper(getDriver()).isSelected(element);
                 break;
             }
         }
@@ -108,7 +108,7 @@ public class NavBarPage extends TestBase {
         inputBox.sendKeys(txt);
         for(WebElement element:autoSuggestList){
             if(element.getText().contains(s)){
-                Actions actions= new Actions(driver);
+                Actions actions= new Actions(getDriver());
                 actions.moveToElement(element).perform();
                 element.click();
                 log.info("Search gift from textBox with auto complete suggest pick "+txt +" and target text search is"+ s  );

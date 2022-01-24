@@ -4,7 +4,6 @@ import com.aventstack.extentreports.Status;
 import helper.logger.LoggerHelper;
 import helper.verification.VerificationHelper;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -12,13 +11,13 @@ import testBase.TestBase;
 
 import java.util.List;
 
-import static testBase.TestBase.test;
+
 
 public class GiftCardPage extends TestBase {
 
     Logger log= LoggerHelper.getLogger(GiftCardPage.class);
     public GiftCardPage(){
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(getDriver(),this);
     }
     @FindBy(css="h2.title")
     private WebElement giftCardHeader;
@@ -41,7 +40,7 @@ public class GiftCardPage extends TestBase {
     public String getGiftCardHeader(){
         log.info("Verify gift Card Page Header text " +giftCardHeader.getText());
         test.log(Status.INFO,"Verify Gift card page Header "+giftCardHeader.getText());
-        return new VerificationHelper(driver).getText(giftCardHeader);
+        return new VerificationHelper(getDriver()).getText(giftCardHeader);
     }
     public void enterAmount(String m){
         log.info("verify if Enter money Amount is Display ");
@@ -71,14 +70,15 @@ public class GiftCardPage extends TestBase {
             e.printStackTrace();
         }return  flag;
     }
-    public void setReadMore(){
+    public void getReadMore(){
         for(WebElement element:readMore){
            element.click();
+           new VerificationHelper(getDriver()).isDisplayed((WebElement) readMore);
         }
     }
-    public boolean verifyJSError(){
+    public boolean emptyMoneyInputCatchingJSError(){
         btn.click();
-       return new VerificationHelper(driver).isDisplayed(JSError);
+       return new VerificationHelper(getDriver()).isDisplayed(JSError);
 
     }
 

@@ -21,7 +21,7 @@ public class WhoToSendPage extends TestBase {
     Logger log= LoggerHelper.getLogger(WhoToSendPage.class);
 
     public WhoToSendPage(){
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(getDriver(),this);
     }
     @FindBy(css = "label#friendName>input")
     private WebElement friendName;
@@ -64,7 +64,7 @@ public class WhoToSendPage extends TestBase {
     private WebElement header;
 
     public HowToSendPage sendAll(String t,String a,String b,String photo){
-        new WaitHelper(driver).waitForElement(friendName, ObjectReader.reader.getExplicitWait());
+        new WaitHelper(getDriver()).waitForElement(friendName, ObjectReader.reader.getExplicitWait());
         setFriendName(t);
         selectedBlessClick.click();
         pickBless(a);
@@ -110,20 +110,20 @@ public class WhoToSendPage extends TestBase {
     public boolean isResultPageHeaderDisplay(){
         log.info("Verify  Who to send Page header status "+ header.isDisplayed());
         test.log(Status.INFO,"Verify  Who to send Page header status "+ header.isDisplayed());
-        return new VerificationHelper(driver).isDisplayed(header);
+        return new VerificationHelper(getDriver()).isDisplayed(header);
 
     }
     public String getResultPageHeaderText(){
         log.info("Verify  Who to send Page header text "+ header.getText());
         test.log(Status.INFO,"Verify  Who to send Page header text "+ header.getText());
-        return new VerificationHelper(driver).getText(header);
+        return new VerificationHelper(getDriver()).getText(header);
     }
     public boolean someoneElse(){
-        return new VerificationHelper(driver).isSelected(someoneElse);
+        return new VerificationHelper(getDriver()).isSelected(someoneElse);
     }
     public boolean clickOnMySelfCheckBox(){
         forMySelf.click();
-       return new VerificationHelper(driver).isDisplayed(imgForMySelf);
+       return new VerificationHelper(getDriver()).isDisplayed(imgForMySelf);
     }
     public String changeGiftPrice(String txt){
         setPrice();

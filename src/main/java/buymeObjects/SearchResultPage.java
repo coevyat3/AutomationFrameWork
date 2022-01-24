@@ -21,7 +21,7 @@ public class SearchResultPage extends TestBase {
     private Logger log= LoggerHelper.getLogger(SearchResultPage.class);
 
     public SearchResultPage(){
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(getDriver(),this);
 
     }
     @FindBy(css=".title-xxl")
@@ -31,13 +31,13 @@ public class SearchResultPage extends TestBase {
     private List<WebElement> giftCard;
 
     public boolean getSearchResultHeader(){
-        new WaitHelper(driver).waitForElement(searchResultHeader,ObjectReader.reader.getExplicitWait());
+        new WaitHelper(getDriver()).waitForElement(searchResultHeader,ObjectReader.reader.getExplicitWait());
         log.info("Verifying display Search Result Page title: "+searchResultHeader.isDisplayed());
         test.log(Status.INFO,"Verifying display Search Result Page title: "+searchResultHeader.isDisplayed());
         return searchResultHeader.isDisplayed();
     }
     public String getSearchResultTextHeader(){
-        new WaitHelper(driver).waitForElement(searchResultHeader,ObjectReader.reader.getExplicitWait());
+        new WaitHelper(getDriver()).waitForElement(searchResultHeader,ObjectReader.reader.getExplicitWait());
         log.info("Verifying Search Result Page Header text: "+searchResultHeader.getText());
         test.log(Status.INFO,"Verifying Search Result Page Header text: "+searchResultHeader.getText());
         return searchResultHeader.getText();

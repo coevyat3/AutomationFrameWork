@@ -20,7 +20,7 @@ public class HomePage extends TestBase {
     private Logger log= LoggerHelper.getLogger(HomePage.class);
 
     public HomePage(){
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(getDriver(),this);
     }
 
     @FindBy(css ="li[class='notSigned'] a" )
@@ -42,18 +42,18 @@ public class HomePage extends TestBase {
     public String getHomePageTitle(){
         log.info("Checking HomePage title");
         test.log(Status.INFO,"Checking HomePage title");
-       return  new VerificationHelper(driver).getPageTitle();
+       return  new VerificationHelper(getDriver()).getPageTitle();
 
     }
     public boolean isLogoDisplay(){
         log.info("Checking logoImg Display "+logoImg);
         test.log(Status.INFO,"Checking logo img display ");
-        return new VerificationHelper(driver).isDisplayed(logoImg);
+        return new VerificationHelper(getDriver()).isDisplayed(logoImg);
     }
     public String getSiteUrl(){
         log.info("Return homePage URL");
         test.log(Status.INFO,"Return HomePage URL");
-        return driver.getCurrentUrl();
+        return getDriver().getCurrentUrl();
     }
 
     public SearchResultPage pickGiftFromTopCategories(String txt){
@@ -70,7 +70,7 @@ public class HomePage extends TestBase {
     public SearchResultPage pickGiftFromMainCategory(String title){
         for(WebElement element:categoriesList){
             if(element.getAttribute("title").contains(title)){
-                Actions actions= new Actions(driver);
+                Actions actions= new Actions(getDriver());
                 actions.moveToElement(element).perform();
                 element.click();
                 break;
@@ -78,9 +78,9 @@ public class HomePage extends TestBase {
         }return new SearchResultPage();
     }
     public GiftCardPage clickOnBuyMeMulti(){
-        boolean flag=new VerificationHelper(driver).isDisplayed(multi);
+        boolean flag=new VerificationHelper(getDriver()).isDisplayed(multi);
         if(flag){
-           Actions actions= new Actions(driver);
+           Actions actions= new Actions(getDriver());
            actions.moveToElement(multi).perform();
            multi.click();
            return new GiftCardPage();

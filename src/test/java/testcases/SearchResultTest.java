@@ -26,7 +26,7 @@ public class SearchResultTest extends TestBase {
     }
 
     @Test(priority = 1,description = "Pick A gift Card from NavBar")
-    public void verifySearchResultHeaderPage() {
+    public void pickGiftCardFromNavBar() {
         searchResultPage= navBarPage.pickItem(Constants.amount,Constants.area,Constants.category);
         AssertionHelper.verifyTrue(searchResultPage.getSearchResultTextHeader().contains(Constants.amount));
         AssertionHelper.verifyTrue(searchResultPage.getSearchResultTextHeader().contains(Constants.category));

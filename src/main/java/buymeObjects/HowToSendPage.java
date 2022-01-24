@@ -4,7 +4,6 @@ import com.aventstack.extentreports.Status;
 import helper.logger.LoggerHelper;
 import helper.verification.VerificationHelper;
 import org.apache.log4j.Logger;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -12,14 +11,14 @@ import testBase.TestBase;
 
 import java.util.List;
 
-import static testBase.TestBase.test;
+
 
 public class HowToSendPage extends TestBase {
 
     Logger log= LoggerHelper.getLogger(WhoToSendPage.class);
     public HowToSendPage(){
 
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(getDriver(),this);
     }
    @FindBy(css = "div.step.active >div.label")
    private WebElement header;
@@ -69,7 +68,7 @@ public class HowToSendPage extends TestBase {
 
 
     public String getPageHeader(){
-        return new VerificationHelper(driver).getText(header);
+        return new VerificationHelper(getDriver()).getText(header);
     }
 
 
@@ -105,7 +104,7 @@ public class HowToSendPage extends TestBase {
     }
 
     public boolean checkNowBox(){
-        return new VerificationHelper(driver).isSelected(nowCheckBox);
+        return new VerificationHelper(getDriver()).isSelected(nowCheckBox);
     }
     public void setDate(String month,String day){
         log.info(" Click on Sent gift later");
@@ -133,7 +132,7 @@ public class HowToSendPage extends TestBase {
 
     }
     public boolean getWarnMsg(){
-       return new VerificationHelper(driver).isDisplayed(sendLaterWarnMsg);
+       return new VerificationHelper(getDriver()).isDisplayed(sendLaterWarnMsg);
     }
     public void setHour(String hour){
         clickHour.click();

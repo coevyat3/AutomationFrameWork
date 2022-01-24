@@ -21,7 +21,7 @@ public class LoginPage extends TestBase {
 
     public LoginPage(){
 
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(getDriver(),this);
 
 
     }
@@ -71,8 +71,8 @@ public class LoginPage extends TestBase {
     }
 
     public String getLoginPageHeader(){
-      new  WaitHelper(driver).waitForElement(loginPageHeader,ObjectReader.reader.getExplicitWait(),50);
-        return new VerificationHelper(driver).getText(loginPageHeader);
+      new  WaitHelper(getDriver()).waitForElement(loginPageHeader,ObjectReader.reader.getExplicitWait(),50);
+        return new VerificationHelper(getDriver()).getText(loginPageHeader);
     }
     public PaymentPage login(String email,String password){
         log.info("Set email to: "+email);

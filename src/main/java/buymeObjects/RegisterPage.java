@@ -17,7 +17,7 @@ public class RegisterPage extends TestBase {
     private Logger log= LoggerHelper.getLogger(HomePage.class);
 
     public RegisterPage(){
-        PageFactory.initElements(driver,this);
+        PageFactory.initElements(getDriver(),this);
     }
     @FindBy(css = "form[action='register'] input[type*='text']")
     private WebElement name;

@@ -14,35 +14,45 @@ public class GiftCardPageTest extends TestBase {
     SearchResultPage searchResultPage;
     GiftCardPage giftCardPage;
     WhoToSendPage whoToSendPage;
+    HomePage homePage;
 
     @Parameters({"browser"})
     @BeforeMethod(alwaysRun = true)
     public void setup(Method method, String browser) throws Exception {
         loadConfig(browser);
+        homePage= new HomePage();
          navBarPage= new NavBarPage();
          searchResultPage= new SearchResultPage();
          giftCardPage= new GiftCardPage();
          whoToSendPage= new WhoToSendPage();
-         searchResultPage=navBarPage.pickItem(Constants.amount,Constants.area,Constants.category);
-         giftCardPage=searchResultPage.pickGiftCardByBusinessName(Constants.giftCardItem);
+
     }
 
-    @Test(priority = 1,enabled = false)
+    @Test(priority = 1)
     public void verifyGiftCardHeaderTest(){
-      AssertionHelper.verifyTrue(giftCardPage.getGiftCardHeader().contains(Constants.giftCardItem));
+        searchResultPage=navBarPage.pickItem(Constants.amount,Constants.area,Constants.category);
+        giftCardPage=searchResultPage.pickGiftCardByBusinessName(Constants.giftCardItem);
+        AssertionHelper.verifyTrue(giftCardPage.getGiftCardHeader().contains(Constants.giftCardItem));
+        giftCardPage.getReadMore();
     }
-    @Test(priority = 2,enabled = false)
-    public void readMoreAboutProduct() throws InterruptedException {
-      giftCardPage.setReadMore();
-    }
-    @Test(priority = 3,enabled = false)
-    public void VerifyMoneyBox() throws InterruptedException {
+
+    @Test(priority = 2)
+    public void VerifyMoneyBox(){
+        searchResultPage=navBarPage.pickItem(Constants.amount,Constants.area,Constants.category);
+        giftCardPage=searchResultPage.pickGiftCardByBusinessName(Constants.giftCardItem);
         giftCardPage.enterAmount(Constants.amount);
 
     }
-    @Test(priority = 4)
+    @Test(priority = 3)
     public void catchingJSErrorOnBlankMoneyBox(){;
-        AssertionHelper.verifyTrue(giftCardPage.verifyJSError());
+        searchResultPage=navBarPage.pickItem(Constants.amount,Constants.area,Constants.category);
+        giftCardPage=searchResultPage.pickGiftCardByBusinessName(Constants.giftCardItem);
+        AssertionHelper.verifyTrue(giftCardPage.emptyMoneyInputCatchingJSError());
+    }
+    @Test(priority = 4)
+    public void clickOnBuyMeMulti(){
+        homePage.clickOnBuyMeMulti();
+        AssertionHelper.verifyTrue(giftCardPage.getGiftCardHeader().contains("BUYME MULTI"));
     }
 
 }
