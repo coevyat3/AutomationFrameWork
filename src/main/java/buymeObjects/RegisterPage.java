@@ -8,15 +8,15 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import testBase.TestBase;
 
 import static testBase.TestBase.test;
 
-public class RegisterPage {
-    private WebDriver driver;
+public class RegisterPage extends TestBase {
+
     private Logger log= LoggerHelper.getLogger(HomePage.class);
 
-    public RegisterPage(WebDriver driver){
-        this.driver=driver;
+    public RegisterPage(){
         PageFactory.initElements(driver,this);
     }
     @FindBy(css = "form[action='register'] input[type*='text']")
@@ -67,7 +67,7 @@ public class RegisterPage {
         log.info("Click Button: "+registerBtn.getAttribute("gtm"));
         test.log(Status.INFO,"Click Button: "+registerBtn.getAttribute("gtm"));
         registerBtn.click();
-        return new HomePage(driver);
+        return new HomePage();
 
     }
     public String getRegisterHeader(){

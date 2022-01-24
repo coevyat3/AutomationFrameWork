@@ -23,17 +23,17 @@ public class HowToSendPageTest extends TestBase {
     @BeforeMethod(alwaysRun = true)
     public void setup(Method method, String browser) throws Exception {
         loadConfig(browser);
-        navBarPage= new NavBarPage(driver);
-        searchResultPage= new SearchResultPage(driver);
-        giftCardPage= new GiftCardPage(driver);
-        whoToSendPage= new WhoToSendPage(driver);
-        howToSendPage= new HowToSendPage(driver);
-        loginPage= new LoginPage(driver);
+        navBarPage= new NavBarPage();
+        searchResultPage= new SearchResultPage();
+        giftCardPage= new GiftCardPage();
+        whoToSendPage= new WhoToSendPage();
+        howToSendPage= new HowToSendPage();
+        loginPage= new LoginPage();
         searchResultPage= navBarPage.pickItem(Constants.amount,Constants.area,Constants.category);
         giftCardPage=searchResultPage.pickGiftCardByBusinessName(Constants.giftCardItem);
         whoToSendPage= giftCardPage.insertAmount(Constants.amount);
         howToSendPage= whoToSendPage.sendAll(Constants.FriendName,Constants.Bless,Constants.OwnBless, ResourceHelper.getResourcePath("src/main/resources/photos/flower.jpg"));
-        loginPage= new LoginPage(driver);
+        loginPage= new LoginPage();
 
     }
     @Test(priority = 1,enabled = false)
@@ -58,7 +58,7 @@ public class HowToSendPageTest extends TestBase {
     @Test(priority = 5)
     public void setWhoToSendPage() throws InterruptedException {
         howToSendPage.sendAll("יולי","21","13:30","s1@walla.com","aaaaa");
-        AssertionHelper.verifyTrue(loginPage.getLoginPageHeader());
+        AssertionHelper.verifyTrue(loginPage.getLoginPageHeader().contains(Constants.loginHeader));
         Thread.sleep(4000);
     }
 

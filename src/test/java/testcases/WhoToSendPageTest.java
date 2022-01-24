@@ -21,11 +21,11 @@ public class WhoToSendPageTest extends TestBase {
     @BeforeMethod(alwaysRun = true)
     public void setup(Method method, String browser) throws Exception {
         loadConfig(browser);
-        navBarPage= new NavBarPage(driver);
-        searchResultPage= new SearchResultPage(driver);
-        giftCardPage= new GiftCardPage(driver);
-        whoToSendPage= new WhoToSendPage(driver);
-        howToSendPage= new HowToSendPage(driver);
+        navBarPage= new NavBarPage();
+        searchResultPage= new SearchResultPage();
+        giftCardPage= new GiftCardPage();
+        whoToSendPage= new WhoToSendPage();
+        howToSendPage= new HowToSendPage();
         searchResultPage= navBarPage.pickItem(Constants.amount,Constants.area,Constants.category);
         giftCardPage=searchResultPage.pickGiftCardByBusinessName(Constants.giftCardItem);
         whoToSendPage= giftCardPage.insertAmount(Constants.amount);

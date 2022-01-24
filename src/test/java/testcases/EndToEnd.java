@@ -25,23 +25,30 @@ public class EndToEnd extends TestBase {
     @BeforeMethod(alwaysRun = true)
     public void setup(Method method, String browser) throws Exception {
         loadConfig(browser);
-        navBarPage= new NavBarPage(driver);
-        searchResultPage= new SearchResultPage(driver);
-        giftCardPage= new GiftCardPage(driver);
-        whoToSendPage= new WhoToSendPage(driver);
-        howToSendPage= new HowToSendPage(driver);
-        loginPage= new LoginPage(driver);
-        homePage= new HomePage(driver);
-        paymentPage=new PaymentPage(driver);
+        homePage= new HomePage();
+        navBarPage= new NavBarPage();
+        searchResultPage= new SearchResultPage();
+        giftCardPage= new GiftCardPage();
+        whoToSendPage= new WhoToSendPage();
+        howToSendPage= new HowToSendPage();
+        loginPage= new LoginPage();
+        homePage= new HomePage();
+        paymentPage=new PaymentPage();
 
     }
     @Test
     public void testProcess(){
+        AssertionHelper.verifyText(homePage.getSiteUrl(),Constants.URL);
         searchResultPage= navBarPage.pickItem(Constants.amount,Constants.area,Constants.category);
+        AssertionHelper.verifyTrue(searchResultPage.getSearchResultHeader());
         giftCardPage=searchResultPage.pickGiftCardByBusinessName(Constants.giftCardItem);
+        AssertionHelper.verifyTrue(giftCardPage.getGiftCardHeader().contains(Constants.giftCardItem));
         whoToSendPage= giftCardPage.insertAmount(Constants.amount);
+        AssertionHelper.verifyTrue(whoToSendPage.isResultPageHeaderDisplay());
         howToSendPage= whoToSendPage.sendAll(Constants.FriendName,Constants.Bless,Constants.OwnBless, ResourceHelper.getResourcePath("src/main/resources/photos/flower.jpg"));
-        loginPage= howToSendPage.sendAll("יולי","21","13:30","s1@walla.com","aaaaa");
+        AssertionHelper.verifyTrue(howToSendPage.getPageHeader().contains(Constants.howToSendPageHeader));
+        loginPage= howToSendPage.sendAll("יולי","21","13:30","s1@walla.com","evyatar");
+        AssertionHelper.verifyText(loginPage.getLoginPageHeader(),Constants.loginHeader);
         paymentPage=loginPage.login(Constants.email,Constants.password);
         AssertionHelper.verifyTrue(paymentPage.getPageTitleText());
     }

@@ -21,7 +21,7 @@ public class HomePageTest extends TestBase {
     @BeforeMethod(alwaysRun = true)
     public void setup(Method method,String browser) throws Exception {
         loadConfig(browser);
-        homePage= new HomePage(driver);
+        homePage= new HomePage();
         test.log(Status.INFO, method.getName()+"**************test started***************");
         log.info("**************"+method.getName()+"Started***************");
         }

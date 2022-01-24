@@ -10,18 +10,19 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import testBase.TestBase;
 
 import static testBase.TestBase.test;
 
-public class LoginPage {
-    private WebDriver driver;
+public class LoginPage extends TestBase {
+
     private Logger log= LoggerHelper.getLogger(LoginPage.class);
     WaitHelper waitHelper;
 
-    public LoginPage(WebDriver driver){
-        this.driver=driver;
+    public LoginPage(){
+
         PageFactory.initElements(driver,this);
-        waitHelper= new WaitHelper(driver);
+
 
     }
     @FindBy(css = "div[class*='oldschool'] input[type='email']")
@@ -36,7 +37,7 @@ public class LoginPage {
     @FindBy(css = "div[class*='reg'] span.text-link")
     private WebElement registerBtn;
 
-    @FindBy(css = "h1.bm-h1")
+    @FindBy(css = "div[class*='login-form'] h1.bm-h1")
     private WebElement loginPageHeader;
 
 
@@ -48,7 +49,7 @@ public class LoginPage {
                setEmail(email);
                setPassword(password);
                clickLoginBtn();
-               return new HomePage(driver);
+              return new HomePage();
     }
     public void setEmail(String email){
        this.email.sendKeys(email);
@@ -63,14 +64,15 @@ public class LoginPage {
         log.info("Go To Register Page");
         test.log(Status.INFO,"Go to register Page");
         clickRegisterBtn();
-        return  new RegisterPage(driver);
+        return  new RegisterPage();
     }
     public void clickRegisterBtn(){
         registerBtn.click();
     }
 
-    public boolean getLoginPageHeader(){
-        return new VerificationHelper(driver).isDisplayed(loginPageHeader);
+    public String getLoginPageHeader(){
+      new  WaitHelper(driver).waitForElement(loginPageHeader,ObjectReader.reader.getExplicitWait(),50);
+        return new VerificationHelper(driver).getText(loginPageHeader);
     }
     public PaymentPage login(String email,String password){
         log.info("Set email to: "+email);
@@ -78,7 +80,7 @@ public class LoginPage {
         setEmail(email);
         setPassword(password);
         clickLoginBtn();
-        return new PaymentPage(driver);
+        return new PaymentPage();
     }
 
 

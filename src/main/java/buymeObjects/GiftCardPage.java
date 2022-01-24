@@ -8,16 +8,16 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import testBase.TestBase;
 
 import java.util.List;
 
 import static testBase.TestBase.test;
 
-public class GiftCardPage {
-    private WebDriver driver;
+public class GiftCardPage extends TestBase {
+
     Logger log= LoggerHelper.getLogger(GiftCardPage.class);
-    public GiftCardPage(WebDriver driver){
-        this.driver=driver;
+    public GiftCardPage(){
         PageFactory.initElements(driver,this);
     }
     @FindBy(css="h2.title")
@@ -58,7 +58,7 @@ public class GiftCardPage {
         log.info("Click On Button"+btn.getAttribute("gtm"));
         test.log(Status.INFO,"Click on Button"+btn.getAttribute("gtm"));
         btn.click();
-        return new WhoToSendPage(driver);
+        return new WhoToSendPage();
     }
     public boolean isPricePresent(WebElement element){
         boolean flag=false;

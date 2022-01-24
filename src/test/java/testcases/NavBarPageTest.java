@@ -24,8 +24,8 @@ public class NavBarPageTest extends TestBase {
     @BeforeMethod(alwaysRun = true)
     public void setup(Method method, String browser) throws Exception {
         loadConfig(browser);
-            navBarPage= new NavBarPage(driver);
-            searchResultPage= new SearchResultPage(driver);
+            navBarPage= new NavBarPage();
+            searchResultPage= new SearchResultPage();
         }
         @Test(priority = 1,description = "pick a gift card with Valid values ")
         public void pickGiftFromNavBar(){

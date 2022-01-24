@@ -13649,3 +13649,316 @@
 2022-01-23 22:09:58,955 - helper.wait.WaitHelper -INFO - element is visible now
 2022-01-23 22:09:58,976 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (d5759743fe612705db313c36b2933126)] -> css selector: div.total-price]
 2022-01-23 22:09:59,280 - testBase.TestBase -INFO - **************testProcessFinished***************
+2022-01-24 14:19:20,689 - testBase.TestBase -INFO - Internalize Web driver 2033282874
+2022-01-24 14:19:20,698 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 14:19:20,700 - helper.wait.WaitHelper -INFO - Implicit Wait has been set to: 20
+2022-01-24 14:19:20,710 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 14:19:32,857 - testcases.HomePageTest -INFO - **************verifySiteURLStarted***************
+2022-01-24 14:19:32,857 - buymeObjects.HomePage -INFO - Return homePage URL
+2022-01-24 14:19:33,228 - testBase.TestBase -INFO - **************verifySiteURLFinished***************
+2022-01-24 14:19:34,215 - testBase.TestBase -INFO - Internalize Web driver 1337626348
+2022-01-24 14:19:34,215 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 14:19:34,215 - helper.wait.WaitHelper -INFO - Implicit Wait has been set to: 20
+2022-01-24 14:19:34,215 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 14:19:39,269 - testcases.HomePageTest -INFO - **************verifyHomePageTitleStarted***************
+2022-01-24 14:19:39,269 - buymeObjects.HomePage -INFO - Checking HomePage title
+2022-01-24 14:19:39,371 - testBase.TestBase -INFO - **************verifyHomePageTitleFinished***************
+2022-01-24 14:19:40,127 - testBase.TestBase -INFO - Internalize Web driver 224738881
+2022-01-24 14:19:40,127 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 14:19:40,127 - helper.wait.WaitHelper -INFO - Implicit Wait has been set to: 20
+2022-01-24 14:19:40,127 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 14:19:44,128 - testcases.HomePageTest -INFO - **************verifyLogoPresentStarted***************
+2022-01-24 14:19:44,176 - buymeObjects.HomePage -INFO - Checking logoImg Display [[ChromeDriver: chrome on WINDOWS (ec53196c0801e348a797372a775fba9e)] -> css selector: div[class*='nav'] img]
+2022-01-24 14:19:44,225 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (ec53196c0801e348a797372a775fba9e)] -> css selector: div[class*='nav'] img]
+2022-01-24 14:19:44,325 - testBase.TestBase -INFO - **************verifyLogoPresentFinished***************
+2022-01-24 14:50:02,893 - testBase.TestBase -INFO - Internalize Web driver 880908391
+2022-01-24 14:50:02,897 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 14:50:02,898 - helper.wait.WaitHelper -INFO - Implicit Wait has been set to: 20
+2022-01-24 14:50:02,907 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:02:05,099 - testBase.TestBase -INFO - Internalize Web driver 1010983633
+2022-01-24 15:02:05,104 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:02:05,106 - helper.wait.WaitHelper -INFO - Implicit Wait has been set to: 20
+2022-01-24 15:02:05,114 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:02:13,510 - buymeObjects.HomePage -INFO - Return homePage URL
+2022-01-24 15:02:13,521 - helper.assertion.AssertionHelper -INFO - verifying test: https://buyme.co.il/ with https://buyme.co.il/
+2022-01-24 15:02:13,545 - buymeObjects.NavBarPage -INFO - Waiting for element [[ChromeDriver: chrome on WINDOWS (fe7e5108125584479a952d403ce64cf0)] -> css selector: span.selected-text] To be clickable
+2022-01-24 15:02:13,573 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:02:13,585 - helper.wait.WaitHelper -INFO - waiting for :[[ChromeDriver: chrome on WINDOWS (fe7e5108125584479a952d403ce64cf0)] -> css selector: span.selected-text] for :20 seconds
+2022-01-24 15:02:13,625 - helper.wait.WaitHelper -INFO - element is clickable now
+2022-01-24 15:02:13,640 - buymeObjects.NavBarPage -INFO - Click on Amount navBar Btn: סכום
+2022-01-24 15:02:13,701 - buymeObjects.NavBarPage -INFO - click on 500 from dropdown
+2022-01-24 15:02:13,836 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (fe7e5108125584479a952d403ce64cf0)] -> css selector: div.dropdown li span]
+2022-01-24 15:02:13,860 - buymeObjects.NavBarPage -INFO - Clicking on Area Element אזור
+2022-01-24 15:02:13,915 - buymeObjects.NavBarPage -INFO - click on דרום from dropdown
+2022-01-24 15:02:14,084 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (fe7e5108125584479a952d403ce64cf0)] -> css selector: div.dropdown li span]
+2022-01-24 15:02:14,112 - buymeObjects.NavBarPage -INFO - Clicking On Category dropdown קטגוריה
+2022-01-24 15:02:14,165 - buymeObjects.NavBarPage -INFO - click on עד הבית from dropdown
+2022-01-24 15:02:14,390 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (fe7e5108125584479a952d403ce64cf0)] -> css selector: div.dropdown li span]
+2022-01-24 15:02:14,420 - buymeObjects.NavBarPage -INFO - Click on Search me a gift Button תמצאו לי מתנה
+2022-01-24 15:02:14,555 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:02:14,569 - helper.wait.WaitHelper -INFO - waiting for :[[ChromeDriver: chrome on WINDOWS (fe7e5108125584479a952d403ce64cf0)] -> css selector: .title-xxl] for :20 seconds
+2022-01-24 15:02:15,628 - helper.wait.WaitHelper -INFO - element is visible now
+2022-01-24 15:02:15,643 - buymeObjects.SearchResultPage -INFO - Verifying display Search Result Page title: true
+2022-01-24 15:02:15,667 - buymeObjects.SearchResultPage -INFO - Picking Gift Card  From search Result Page CASTRO
+2022-01-24 15:02:15,757 - buymeObjects.SearchResultPage -INFO - Found gift card: CASTROfrom the search result page
+2022-01-24 15:02:15,939 - buymeObjects.GiftCardPage -INFO - Verify gift Card Page Header text קסטרו - CASTRO
+2022-01-24 15:02:15,979 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (fe7e5108125584479a952d403ce64cf0)] -> css selector: h2.title]
+2022-01-24 15:02:16,008 - helper.verification.VerificationHelper -INFO - element text is: קסטרו - CASTRO
+2022-01-24 15:02:16,019 - buymeObjects.GiftCardPage -INFO - verify if Enter money Amount is Display 
+2022-01-24 15:02:16,116 - buymeObjects.GiftCardPage -INFO - Click On Buttonבחירה
+2022-01-24 15:02:16,322 - buymeObjects.WhoToSendPage -INFO - Verify  Who to send Page header status true
+2022-01-24 15:02:16,363 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (fe7e5108125584479a952d403ce64cf0)] -> css selector: div.step.active>div.label]
+2022-01-24 15:02:16,378 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:02:16,386 - helper.wait.WaitHelper -INFO - waiting for :[[ChromeDriver: chrome on WINDOWS (fe7e5108125584479a952d403ce64cf0)] -> css selector: label#friendName>input] for :20 seconds
+2022-01-24 15:02:17,467 - helper.wait.WaitHelper -INFO - element is visible now
+2022-01-24 15:02:17,467 - buymeObjects.WhoToSendPage -INFO - Send friend name into textBox: friendName
+2022-01-24 15:02:17,726 - buymeObjects.WhoToSendPage -INFO - Clearing suggest text blessing& adding new Bless into textBox: אח שלי גיבור המון מזל טוב ליום הולדתך
+2022-01-24 15:02:17,841 - buymeObjects.WhoToSendPage -INFO - Upload a photo ..
+2022-01-24 15:02:17,897 - buymeObjects.WhoToSendPage -INFO - Clicking Button המשך
+2022-01-24 15:02:18,233 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (fe7e5108125584479a952d403ce64cf0)] -> css selector: div.step.active >div.label]
+2022-01-24 15:02:18,262 - helper.verification.VerificationHelper -INFO - element text is: איך לשלוח
+2022-01-24 15:02:18,275 - buymeObjects.WhoToSendPage -INFO -  Click on Sent gift later
+2022-01-24 15:02:18,987 - buymeObjects.WhoToSendPage -INFO - set date to month: יולי Day: 21
+2022-01-24 15:02:19,330 - buymeObjects.WhoToSendPage -INFO - Set hour to: 13:30
+2022-01-24 15:02:19,554 - buymeObjects.WhoToSendPage -INFO - Pick Send with email
+2022-01-24 15:02:19,611 - buymeObjects.WhoToSendPage -INFO - Insert Email.. s1@walla.com
+2022-01-24 15:02:19,697 - buymeObjects.WhoToSendPage -INFO - Set Sender Name: aaaaa
+2022-01-24 15:02:19,780 - buymeObjects.WhoToSendPage -INFO - Click Button המשך לתשלום
+2022-01-24 15:02:19,870 - helper.assertion.AssertionHelper -INFO - verifying test: גיפט קארד ל- קסטרו castro with כניסה
+2022-01-24 15:02:20,318 - testBase.TestBase -INFO - **************testProcessFinished***************
+2022-01-24 15:04:16,602 - testBase.TestBase -INFO - Internalize Web driver 146346292
+2022-01-24 15:04:16,607 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:04:16,608 - helper.wait.WaitHelper -INFO - Implicit Wait has been set to: 20
+2022-01-24 15:04:16,616 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:04:21,921 - testcases.HomePageTest -INFO - **************verifySiteURLStarted***************
+2022-01-24 15:04:21,922 - buymeObjects.HomePage -INFO - Return homePage URL
+2022-01-24 15:04:22,198 - testBase.TestBase -INFO - **************verifySiteURLFinished***************
+2022-01-24 15:04:23,183 - testBase.TestBase -INFO - Internalize Web driver 290509937
+2022-01-24 15:04:23,184 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:04:23,185 - helper.wait.WaitHelper -INFO - Implicit Wait has been set to: 20
+2022-01-24 15:04:23,190 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:04:24,606 - testcases.HomePageTest -INFO - **************verifyHomePageTitleStarted***************
+2022-01-24 15:04:24,606 - buymeObjects.HomePage -INFO - Checking HomePage title
+2022-01-24 15:04:34,728 - testBase.TestBase -INFO - Internalize Web driver 817944369
+2022-01-24 15:04:34,738 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:04:34,740 - helper.wait.WaitHelper -INFO - Implicit Wait has been set to: 20
+2022-01-24 15:04:34,748 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:04:40,291 - buymeObjects.HomePage -INFO - Return homePage URL
+2022-01-24 15:04:40,300 - helper.assertion.AssertionHelper -INFO - verifying test: https://buyme.co.il/ with https://buyme.co.il/
+2022-01-24 15:04:40,318 - buymeObjects.NavBarPage -INFO - Waiting for element [[ChromeDriver: chrome on WINDOWS (bfa14b329ddbf7c31f0e486cda3e4c1d)] -> css selector: span.selected-text] To be clickable
+2022-01-24 15:04:40,336 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:04:40,345 - helper.wait.WaitHelper -INFO - waiting for :[[ChromeDriver: chrome on WINDOWS (bfa14b329ddbf7c31f0e486cda3e4c1d)] -> css selector: span.selected-text] for :20 seconds
+2022-01-24 15:04:40,382 - helper.wait.WaitHelper -INFO - element is clickable now
+2022-01-24 15:04:40,395 - buymeObjects.NavBarPage -INFO - Click on Amount navBar Btn: סכום
+2022-01-24 15:04:40,454 - buymeObjects.NavBarPage -INFO - click on 500 from dropdown
+2022-01-24 15:04:40,587 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (bfa14b329ddbf7c31f0e486cda3e4c1d)] -> css selector: div.dropdown li span]
+2022-01-24 15:04:40,614 - buymeObjects.NavBarPage -INFO - Clicking on Area Element אזור
+2022-01-24 15:04:40,669 - buymeObjects.NavBarPage -INFO - click on דרום from dropdown
+2022-01-24 15:04:40,840 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (bfa14b329ddbf7c31f0e486cda3e4c1d)] -> css selector: div.dropdown li span]
+2022-01-24 15:04:40,868 - buymeObjects.NavBarPage -INFO - Clicking On Category dropdown קטגוריה
+2022-01-24 15:04:40,924 - buymeObjects.NavBarPage -INFO - click on עד הבית from dropdown
+2022-01-24 15:04:41,164 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (bfa14b329ddbf7c31f0e486cda3e4c1d)] -> css selector: div.dropdown li span]
+2022-01-24 15:04:41,194 - buymeObjects.NavBarPage -INFO - Click on Search me a gift Button תמצאו לי מתנה
+2022-01-24 15:04:41,323 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:04:41,332 - helper.wait.WaitHelper -INFO - waiting for :[[ChromeDriver: chrome on WINDOWS (bfa14b329ddbf7c31f0e486cda3e4c1d)] -> css selector: .title-xxl] for :20 seconds
+2022-01-24 15:04:42,418 - helper.wait.WaitHelper -INFO - element is visible now
+2022-01-24 15:04:42,434 - buymeObjects.SearchResultPage -INFO - Verifying display Search Result Page title: true
+2022-01-24 15:04:42,451 - buymeObjects.SearchResultPage -INFO - Picking Gift Card  From search Result Page CASTRO
+2022-01-24 15:04:42,545 - buymeObjects.SearchResultPage -INFO - Found gift card: CASTROfrom the search result page
+2022-01-24 15:04:42,728 - buymeObjects.GiftCardPage -INFO - Verify gift Card Page Header text קסטרו - CASTRO
+2022-01-24 15:04:42,769 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (bfa14b329ddbf7c31f0e486cda3e4c1d)] -> css selector: h2.title]
+2022-01-24 15:04:42,786 - helper.verification.VerificationHelper -INFO - element text is: קסטרו - CASTRO
+2022-01-24 15:04:42,809 - buymeObjects.GiftCardPage -INFO - verify if Enter money Amount is Display 
+2022-01-24 15:04:42,892 - buymeObjects.GiftCardPage -INFO - Click On Buttonבחירה
+2022-01-24 15:04:43,102 - buymeObjects.WhoToSendPage -INFO - Verify  Who to send Page header status true
+2022-01-24 15:04:43,149 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (bfa14b329ddbf7c31f0e486cda3e4c1d)] -> css selector: div.step.active>div.label]
+2022-01-24 15:04:43,163 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:04:43,171 - helper.wait.WaitHelper -INFO - waiting for :[[ChromeDriver: chrome on WINDOWS (bfa14b329ddbf7c31f0e486cda3e4c1d)] -> css selector: label#friendName>input] for :20 seconds
+2022-01-24 15:04:44,238 - helper.wait.WaitHelper -INFO - element is visible now
+2022-01-24 15:04:44,239 - buymeObjects.WhoToSendPage -INFO - Send friend name into textBox: friendName
+2022-01-24 15:04:44,492 - buymeObjects.WhoToSendPage -INFO - Clearing suggest text blessing& adding new Bless into textBox: אח שלי גיבור המון מזל טוב ליום הולדתך
+2022-01-24 15:04:44,603 - buymeObjects.WhoToSendPage -INFO - Upload a photo ..
+2022-01-24 15:04:44,656 - buymeObjects.WhoToSendPage -INFO - Clicking Button המשך
+2022-01-24 15:04:44,972 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (bfa14b329ddbf7c31f0e486cda3e4c1d)] -> css selector: div.step.active >div.label]
+2022-01-24 15:04:45,000 - helper.verification.VerificationHelper -INFO - element text is: איך לשלוח
+2022-01-24 15:04:45,011 - buymeObjects.WhoToSendPage -INFO -  Click on Sent gift later
+2022-01-24 15:04:45,731 - buymeObjects.WhoToSendPage -INFO - set date to month: יולי Day: 21
+2022-01-24 15:04:46,090 - buymeObjects.WhoToSendPage -INFO - Set hour to: 13:30
+2022-01-24 15:04:46,321 - buymeObjects.WhoToSendPage -INFO - Pick Send with email
+2022-01-24 15:04:46,375 - buymeObjects.WhoToSendPage -INFO - Insert Email.. s1@walla.com
+2022-01-24 15:04:46,463 - buymeObjects.WhoToSendPage -INFO - Set Sender Name: aaaaa
+2022-01-24 15:04:46,541 - buymeObjects.WhoToSendPage -INFO - Click Button המשך לתשלום
+2022-01-24 15:04:46,629 - helper.assertion.AssertionHelper -INFO - verifying test: גיפט קארד ל- קסטרו castro with כניסה
+2022-01-24 15:04:47,037 - testBase.TestBase -INFO - **************testProcessFinished***************
+2022-01-24 15:09:02,224 - testBase.TestBase -INFO - Internalize Web driver 817944369
+2022-01-24 15:09:02,224 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:09:02,224 - helper.wait.WaitHelper -INFO - Implicit Wait has been set to: 20
+2022-01-24 15:09:02,240 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:09:08,184 - buymeObjects.HomePage -INFO - Return homePage URL
+2022-01-24 15:09:08,192 - helper.assertion.AssertionHelper -INFO - verifying test: https://buyme.co.il/ with https://buyme.co.il/
+2022-01-24 15:09:08,208 - buymeObjects.NavBarPage -INFO - Waiting for element [[ChromeDriver: chrome on WINDOWS (3db64536169aa485bf2b804779279fc8)] -> css selector: span.selected-text] To be clickable
+2022-01-24 15:09:08,226 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:09:08,235 - helper.wait.WaitHelper -INFO - waiting for :[[ChromeDriver: chrome on WINDOWS (3db64536169aa485bf2b804779279fc8)] -> css selector: span.selected-text] for :20 seconds
+2022-01-24 15:09:08,264 - helper.wait.WaitHelper -INFO - element is clickable now
+2022-01-24 15:09:08,279 - buymeObjects.NavBarPage -INFO - Click on Amount navBar Btn: סכום
+2022-01-24 15:09:08,338 - buymeObjects.NavBarPage -INFO - click on 500 from dropdown
+2022-01-24 15:09:08,475 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (3db64536169aa485bf2b804779279fc8)] -> css selector: div.dropdown li span]
+2022-01-24 15:09:08,503 - buymeObjects.NavBarPage -INFO - Clicking on Area Element אזור
+2022-01-24 15:09:08,561 - buymeObjects.NavBarPage -INFO - click on דרום from dropdown
+2022-01-24 15:09:08,723 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (3db64536169aa485bf2b804779279fc8)] -> css selector: div.dropdown li span]
+2022-01-24 15:09:08,750 - buymeObjects.NavBarPage -INFO - Clicking On Category dropdown קטגוריה
+2022-01-24 15:09:08,804 - buymeObjects.NavBarPage -INFO - click on עד הבית from dropdown
+2022-01-24 15:09:09,049 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (3db64536169aa485bf2b804779279fc8)] -> css selector: div.dropdown li span]
+2022-01-24 15:09:09,082 - buymeObjects.NavBarPage -INFO - Click on Search me a gift Button תמצאו לי מתנה
+2022-01-24 15:09:09,230 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:09:09,240 - helper.wait.WaitHelper -INFO - waiting for :[[ChromeDriver: chrome on WINDOWS (3db64536169aa485bf2b804779279fc8)] -> css selector: .title-xxl] for :20 seconds
+2022-01-24 15:09:10,305 - helper.wait.WaitHelper -INFO - element is visible now
+2022-01-24 15:09:10,321 - buymeObjects.SearchResultPage -INFO - Verifying display Search Result Page title: true
+2022-01-24 15:09:10,348 - buymeObjects.SearchResultPage -INFO - Picking Gift Card  From search Result Page CASTRO
+2022-01-24 15:09:10,429 - buymeObjects.SearchResultPage -INFO - Found gift card: CASTROfrom the search result page
+2022-01-24 15:09:10,864 - buymeObjects.GiftCardPage -INFO - Verify gift Card Page Header text קסטרו - CASTRO
+2022-01-24 15:09:10,904 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (3db64536169aa485bf2b804779279fc8)] -> css selector: h2.title]
+2022-01-24 15:09:10,919 - helper.verification.VerificationHelper -INFO - element text is: קסטרו - CASTRO
+2022-01-24 15:09:10,943 - buymeObjects.GiftCardPage -INFO - verify if Enter money Amount is Display 
+2022-01-24 15:09:11,033 - buymeObjects.GiftCardPage -INFO - Click On Buttonבחירה
+2022-01-24 15:09:11,253 - buymeObjects.WhoToSendPage -INFO - Verify  Who to send Page header status true
+2022-01-24 15:09:11,302 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (3db64536169aa485bf2b804779279fc8)] -> css selector: div.step.active>div.label]
+2022-01-24 15:09:11,317 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:09:11,325 - helper.wait.WaitHelper -INFO - waiting for :[[ChromeDriver: chrome on WINDOWS (3db64536169aa485bf2b804779279fc8)] -> css selector: label#friendName>input] for :20 seconds
+2022-01-24 15:09:12,385 - helper.wait.WaitHelper -INFO - element is visible now
+2022-01-24 15:09:12,385 - buymeObjects.WhoToSendPage -INFO - Send friend name into textBox: friendName
+2022-01-24 15:09:12,643 - buymeObjects.WhoToSendPage -INFO - Clearing suggest text blessing& adding new Bless into textBox: אח שלי גיבור המון מזל טוב ליום הולדתך
+2022-01-24 15:09:12,750 - buymeObjects.WhoToSendPage -INFO - Upload a photo ..
+2022-01-24 15:09:12,806 - buymeObjects.WhoToSendPage -INFO - Clicking Button המשך
+2022-01-24 15:09:13,125 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (3db64536169aa485bf2b804779279fc8)] -> css selector: div.step.active >div.label]
+2022-01-24 15:09:13,155 - helper.verification.VerificationHelper -INFO - element text is: איך לשלוח
+2022-01-24 15:09:13,169 - buymeObjects.WhoToSendPage -INFO -  Click on Sent gift later
+2022-01-24 15:09:13,894 - buymeObjects.WhoToSendPage -INFO - set date to month: יולי Day: 21
+2022-01-24 15:09:14,258 - buymeObjects.WhoToSendPage -INFO - Set hour to: 13:30
+2022-01-24 15:09:14,489 - buymeObjects.WhoToSendPage -INFO - Pick Send with email
+2022-01-24 15:09:14,545 - buymeObjects.WhoToSendPage -INFO - Insert Email.. s1@walla.com
+2022-01-24 15:09:14,633 - buymeObjects.WhoToSendPage -INFO - Set Sender Name: aaaaa
+2022-01-24 15:09:14,718 - buymeObjects.WhoToSendPage -INFO - Click Button המשך לתשלום
+2022-01-24 15:09:15,211 - testBase.TestBase -INFO - **************testProcessFinished***************
+2022-01-24 15:09:56,339 - testBase.TestBase -INFO - Internalize Web driver 1709882027
+2022-01-24 15:09:56,343 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:09:56,344 - helper.wait.WaitHelper -INFO - Implicit Wait has been set to: 20
+2022-01-24 15:09:56,351 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:10:09,688 - buymeObjects.HomePage -INFO - Return homePage URL
+2022-01-24 15:10:09,704 - helper.assertion.AssertionHelper -INFO - verifying test: https://buyme.co.il/ with https://buyme.co.il/
+2022-01-24 15:10:09,704 - buymeObjects.NavBarPage -INFO - Waiting for element [[ChromeDriver: chrome on WINDOWS (f926c654427837db2e63bf17e291a171)] -> css selector: span.selected-text] To be clickable
+2022-01-24 15:10:09,735 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:10:09,735 - helper.wait.WaitHelper -INFO - waiting for :[[ChromeDriver: chrome on WINDOWS (f926c654427837db2e63bf17e291a171)] -> css selector: span.selected-text] for :20 seconds
+2022-01-24 15:10:09,766 - helper.wait.WaitHelper -INFO - element is clickable now
+2022-01-24 15:10:09,782 - buymeObjects.NavBarPage -INFO - Click on Amount navBar Btn: סכום
+2022-01-24 15:10:09,843 - buymeObjects.NavBarPage -INFO - click on 500 from dropdown
+2022-01-24 15:10:09,976 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (f926c654427837db2e63bf17e291a171)] -> css selector: div.dropdown li span]
+2022-01-24 15:10:10,002 - buymeObjects.NavBarPage -INFO - Clicking on Area Element אזור
+2022-01-24 15:10:10,060 - buymeObjects.NavBarPage -INFO - click on דרום from dropdown
+2022-01-24 15:10:10,218 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (f926c654427837db2e63bf17e291a171)] -> css selector: div.dropdown li span]
+2022-01-24 15:10:10,244 - buymeObjects.NavBarPage -INFO - Clicking On Category dropdown קטגוריה
+2022-01-24 15:10:10,297 - buymeObjects.NavBarPage -INFO - click on עד הבית from dropdown
+2022-01-24 15:10:10,523 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (f926c654427837db2e63bf17e291a171)] -> css selector: div.dropdown li span]
+2022-01-24 15:10:10,551 - buymeObjects.NavBarPage -INFO - Click on Search me a gift Button תמצאו לי מתנה
+2022-01-24 15:10:10,701 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:10:10,710 - helper.wait.WaitHelper -INFO - waiting for :[[ChromeDriver: chrome on WINDOWS (f926c654427837db2e63bf17e291a171)] -> css selector: .title-xxl] for :20 seconds
+2022-01-24 15:10:11,804 - helper.wait.WaitHelper -INFO - element is visible now
+2022-01-24 15:10:11,827 - buymeObjects.SearchResultPage -INFO - Verifying display Search Result Page title: true
+2022-01-24 15:10:11,859 - buymeObjects.SearchResultPage -INFO - Picking Gift Card  From search Result Page CASTRO
+2022-01-24 15:10:11,965 - buymeObjects.SearchResultPage -INFO - Found gift card: CASTROfrom the search result page
+2022-01-24 15:10:12,124 - buymeObjects.GiftCardPage -INFO - Verify gift Card Page Header text קסטרו - CASTRO
+2022-01-24 15:10:12,161 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (f926c654427837db2e63bf17e291a171)] -> css selector: h2.title]
+2022-01-24 15:10:12,184 - helper.verification.VerificationHelper -INFO - element text is: קסטרו - CASTRO
+2022-01-24 15:10:12,195 - buymeObjects.GiftCardPage -INFO - verify if Enter money Amount is Display 
+2022-01-24 15:10:12,284 - buymeObjects.GiftCardPage -INFO - Click On Buttonבחירה
+2022-01-24 15:10:12,499 - buymeObjects.WhoToSendPage -INFO - Verify  Who to send Page header status true
+2022-01-24 15:10:12,543 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (f926c654427837db2e63bf17e291a171)] -> css selector: div.step.active>div.label]
+2022-01-24 15:10:12,560 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:10:12,568 - helper.wait.WaitHelper -INFO - waiting for :[[ChromeDriver: chrome on WINDOWS (f926c654427837db2e63bf17e291a171)] -> css selector: label#friendName>input] for :20 seconds
+2022-01-24 15:10:13,114 - helper.wait.WaitHelper -INFO - element is visible now
+2022-01-24 15:10:13,115 - buymeObjects.WhoToSendPage -INFO - Send friend name into textBox: friendName
+2022-01-24 15:10:13,407 - buymeObjects.WhoToSendPage -INFO - Clearing suggest text blessing& adding new Bless into textBox: אח שלי גיבור המון מזל טוב ליום הולדתך
+2022-01-24 15:10:13,513 - buymeObjects.WhoToSendPage -INFO - Upload a photo ..
+2022-01-24 15:10:13,573 - buymeObjects.WhoToSendPage -INFO - Clicking Button המשך
+2022-01-24 15:10:13,886 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (f926c654427837db2e63bf17e291a171)] -> css selector: div.step.active >div.label]
+2022-01-24 15:10:13,915 - helper.verification.VerificationHelper -INFO - element text is: איך לשלוח
+2022-01-24 15:10:13,926 - buymeObjects.WhoToSendPage -INFO -  Click on Sent gift later
+2022-01-24 15:10:14,625 - buymeObjects.WhoToSendPage -INFO - set date to month: יולי Day: 21
+2022-01-24 15:10:15,012 - buymeObjects.WhoToSendPage -INFO - Set hour to: 13:30
+2022-01-24 15:10:15,241 - buymeObjects.WhoToSendPage -INFO - Pick Send with email
+2022-01-24 15:10:15,289 - buymeObjects.WhoToSendPage -INFO - Insert Email.. s1@walla.com
+2022-01-24 15:10:15,372 - buymeObjects.WhoToSendPage -INFO - Set Sender Name: aaaaa
+2022-01-24 15:10:15,456 - buymeObjects.WhoToSendPage -INFO - Click Button המשך לתשלום
+2022-01-24 15:10:15,538 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:10:15,717 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (f926c654427837db2e63bf17e291a171)] -> css selector: div[class*='login-form'] h1.bm-h1]
+2022-01-24 15:10:15,744 - helper.verification.VerificationHelper -INFO - element text is: כניסה
+2022-01-24 15:10:15,754 - helper.assertion.AssertionHelper -INFO - verifying test: כניסה with כניסה
+2022-01-24 15:10:15,755 - buymeObjects.LoginPage -INFO - Set email to: a1b1c1@xyz.com
+2022-01-24 15:10:18,602 - buymeObjects.PaymentPage -INFO - Verify Payment Page title סה"כ לתשלום
+₪500
+2022-01-24 15:10:18,616 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:10:18,623 - helper.wait.WaitHelper -INFO - waiting for :[[ChromeDriver: chrome on WINDOWS (f926c654427837db2e63bf17e291a171)] -> css selector: div.total-price] for :20 seconds
+2022-01-24 15:10:18,663 - helper.wait.WaitHelper -INFO - element is visible now
+2022-01-24 15:10:18,683 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (f926c654427837db2e63bf17e291a171)] -> css selector: div.total-price]
+2022-01-24 15:10:18,996 - testBase.TestBase -INFO - **************testProcessFinished***************
+2022-01-24 15:14:33,723 - testBase.TestBase -INFO - Internalize Web driver 2124978601
+2022-01-24 15:14:33,723 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:14:33,723 - helper.wait.WaitHelper -INFO - Implicit Wait has been set to: 20
+2022-01-24 15:14:33,739 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:14:47,145 - buymeObjects.HomePage -INFO - Return homePage URL
+2022-01-24 15:14:47,161 - helper.assertion.AssertionHelper -INFO - verifying test: https://buyme.co.il/ with https://buyme.co.il/
+2022-01-24 15:14:47,161 - buymeObjects.NavBarPage -INFO - Waiting for element [[ChromeDriver: chrome on WINDOWS (48ac59d50ac2d44027286ac764880c34)] -> css selector: span.selected-text] To be clickable
+2022-01-24 15:14:47,192 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:14:47,192 - helper.wait.WaitHelper -INFO - waiting for :[[ChromeDriver: chrome on WINDOWS (48ac59d50ac2d44027286ac764880c34)] -> css selector: span.selected-text] for :20 seconds
+2022-01-24 15:14:47,223 - helper.wait.WaitHelper -INFO - element is clickable now
+2022-01-24 15:14:47,239 - buymeObjects.NavBarPage -INFO - Click on Amount navBar Btn: סכום
+2022-01-24 15:14:47,304 - buymeObjects.NavBarPage -INFO - click on 500 from dropdown
+2022-01-24 15:14:47,450 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (48ac59d50ac2d44027286ac764880c34)] -> css selector: div.dropdown li span]
+2022-01-24 15:14:47,489 - buymeObjects.NavBarPage -INFO - Clicking on Area Element אזור
+2022-01-24 15:14:47,545 - buymeObjects.NavBarPage -INFO - click on דרום from dropdown
+2022-01-24 15:14:47,710 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (48ac59d50ac2d44027286ac764880c34)] -> css selector: div.dropdown li span]
+2022-01-24 15:14:47,737 - buymeObjects.NavBarPage -INFO - Clicking On Category dropdown קטגוריה
+2022-01-24 15:14:47,790 - buymeObjects.NavBarPage -INFO - click on עד הבית from dropdown
+2022-01-24 15:14:48,026 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (48ac59d50ac2d44027286ac764880c34)] -> css selector: div.dropdown li span]
+2022-01-24 15:14:48,066 - buymeObjects.NavBarPage -INFO - Click on Search me a gift Button תמצאו לי מתנה
+2022-01-24 15:14:48,219 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:14:48,229 - helper.wait.WaitHelper -INFO - waiting for :[[ChromeDriver: chrome on WINDOWS (48ac59d50ac2d44027286ac764880c34)] -> css selector: .title-xxl] for :20 seconds
+2022-01-24 15:14:49,298 - helper.wait.WaitHelper -INFO - element is visible now
+2022-01-24 15:14:49,312 - buymeObjects.SearchResultPage -INFO - Verifying display Search Result Page title: true
+2022-01-24 15:14:49,341 - buymeObjects.SearchResultPage -INFO - Picking Gift Card  From search Result Page CASTRO
+2022-01-24 15:14:49,429 - buymeObjects.SearchResultPage -INFO - Found gift card: CASTROfrom the search result page
+2022-01-24 15:14:49,593 - buymeObjects.GiftCardPage -INFO - Verify gift Card Page Header text קסטרו - CASTRO
+2022-01-24 15:14:49,617 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (48ac59d50ac2d44027286ac764880c34)] -> css selector: h2.title]
+2022-01-24 15:14:49,650 - helper.verification.VerificationHelper -INFO - element text is: קסטרו - CASTRO
+2022-01-24 15:14:49,661 - buymeObjects.GiftCardPage -INFO - verify if Enter money Amount is Display 
+2022-01-24 15:14:49,766 - buymeObjects.GiftCardPage -INFO - Click On Buttonבחירה
+2022-01-24 15:14:49,986 - buymeObjects.WhoToSendPage -INFO - Verify  Who to send Page header status true
+2022-01-24 15:14:50,021 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (48ac59d50ac2d44027286ac764880c34)] -> css selector: div.step.active>div.label]
+2022-01-24 15:14:50,037 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:14:50,046 - helper.wait.WaitHelper -INFO - waiting for :[[ChromeDriver: chrome on WINDOWS (48ac59d50ac2d44027286ac764880c34)] -> css selector: label#friendName>input] for :20 seconds
+2022-01-24 15:14:50,585 - helper.wait.WaitHelper -INFO - element is visible now
+2022-01-24 15:14:50,585 - buymeObjects.WhoToSendPage -INFO - Send friend name into textBox: friendName
+2022-01-24 15:14:50,875 - buymeObjects.WhoToSendPage -INFO - Clearing suggest text blessing& adding new Bless into textBox: אח שלי גיבור המון מזל טוב ליום הולדתך
+2022-01-24 15:14:50,977 - buymeObjects.WhoToSendPage -INFO - Upload a photo ..
+2022-01-24 15:14:51,038 - buymeObjects.WhoToSendPage -INFO - Clicking Button המשך
+2022-01-24 15:14:51,275 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (48ac59d50ac2d44027286ac764880c34)] -> css selector: div.step.active >div.label]
+2022-01-24 15:14:51,304 - helper.verification.VerificationHelper -INFO - element text is: איך לשלוח
+2022-01-24 15:14:51,317 - buymeObjects.WhoToSendPage -INFO -  Click on Sent gift later
+2022-01-24 15:14:52,014 - buymeObjects.WhoToSendPage -INFO - set date to month: יולי Day: 21
+2022-01-24 15:14:52,364 - buymeObjects.WhoToSendPage -INFO - Set hour to: 13:30
+2022-01-24 15:14:52,602 - buymeObjects.WhoToSendPage -INFO - Pick Send with email
+2022-01-24 15:14:52,653 - buymeObjects.WhoToSendPage -INFO - Insert Email.. s1@walla.com
+2022-01-24 15:14:52,739 - buymeObjects.WhoToSendPage -INFO - Set Sender Name: aaaaa
+2022-01-24 15:14:52,821 - buymeObjects.WhoToSendPage -INFO - Click Button המשך לתשלום
+2022-01-24 15:14:52,900 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:14:53,065 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (48ac59d50ac2d44027286ac764880c34)] -> css selector: div[class*='login-form'] h1.bm-h1]
+2022-01-24 15:14:53,094 - helper.verification.VerificationHelper -INFO - element text is: כניסה
+2022-01-24 15:14:53,106 - helper.assertion.AssertionHelper -INFO - verifying test: כניסה with כניסה
+2022-01-24 15:14:53,107 - buymeObjects.LoginPage -INFO - Set email to: a1b1c1@xyz.com
+2022-01-24 15:14:55,727 - buymeObjects.PaymentPage -INFO - Verify Payment Page title סה"כ לתשלום
+₪500
+2022-01-24 15:14:55,740 - helper.wait.WaitHelper -INFO - WaitHelper object created..
+2022-01-24 15:14:55,746 - helper.wait.WaitHelper -INFO - waiting for :[[ChromeDriver: chrome on WINDOWS (48ac59d50ac2d44027286ac764880c34)] -> css selector: div.total-price] for :20 seconds
+2022-01-24 15:14:55,763 - helper.wait.WaitHelper -INFO - element is visible now
+2022-01-24 15:14:55,784 - helper.verification.VerificationHelper -INFO - Element is present [[ChromeDriver: chrome on WINDOWS (48ac59d50ac2d44027286ac764880c34)] -> css selector: div.total-price]
+2022-01-24 15:14:56,171 - testBase.TestBase -INFO - **************testProcessFinished***************

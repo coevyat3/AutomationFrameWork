@@ -9,18 +9,18 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import testBase.TestBase;
 
 import java.util.List;
 
 import static testBase.TestBase.test;
 
 
-public class SearchResultPage {
-    private WebDriver driver;
+public class SearchResultPage extends TestBase {
+
     private Logger log= LoggerHelper.getLogger(SearchResultPage.class);
 
-    public SearchResultPage(WebDriver driver){
-        this.driver=driver;
+    public SearchResultPage(){
         PageFactory.initElements(driver,this);
 
     }
@@ -52,7 +52,7 @@ public class SearchResultPage {
              test.log(Status.INFO,"Found gift card: "+txt + "from the search result page");
              break;
          }
-     }return new GiftCardPage(driver);
+     }return new GiftCardPage();
     }
 
 

@@ -4,25 +4,22 @@ import com.aventstack.extentreports.Status;
 import helper.logger.LoggerHelper;
 import helper.verification.VerificationHelper;
 import org.apache.log4j.Logger;
-import org.checkerframework.checker.units.qual.A;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import testBase.TestBase;
 
 
 import java.util.List;
 import java.util.NoSuchElementException;
 
-import static testBase.TestBase.test;
 
-public class HomePage {
-    private WebDriver driver;
+
+public class HomePage extends TestBase {
     private Logger log= LoggerHelper.getLogger(HomePage.class);
 
-    public HomePage(WebDriver driver){
-        this.driver=driver;
+    public HomePage(){
         PageFactory.initElements(driver,this);
     }
 
@@ -68,7 +65,7 @@ public class HomePage {
                    break;
                }
            }
-           return new SearchResultPage(driver);
+           return new SearchResultPage();
     }
     public SearchResultPage pickGiftFromMainCategory(String title){
         for(WebElement element:categoriesList){
@@ -78,7 +75,7 @@ public class HomePage {
                 element.click();
                 break;
             }
-        }return new SearchResultPage(driver);
+        }return new SearchResultPage();
     }
     public GiftCardPage clickOnBuyMeMulti(){
         boolean flag=new VerificationHelper(driver).isDisplayed(multi);
@@ -86,7 +83,7 @@ public class HomePage {
            Actions actions= new Actions(driver);
            actions.moveToElement(multi).perform();
            multi.click();
-           return new GiftCardPage(driver);
+           return new GiftCardPage();
        }
        else throw new NoSuchElementException();
     }
@@ -95,7 +92,7 @@ public class HomePage {
 
     public LoginPage gotoLogin(){
         loginBtn.click();
-        return new LoginPage(driver);
+        return new LoginPage();
     }
 
 

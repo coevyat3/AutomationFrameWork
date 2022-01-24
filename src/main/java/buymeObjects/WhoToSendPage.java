@@ -10,17 +10,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import testBase.TestBase;
 
 import java.util.List;
 
 import static testBase.TestBase.test;
 
-public class WhoToSendPage {
-    WebDriver driver;
+public class WhoToSendPage extends TestBase {
+
     Logger log= LoggerHelper.getLogger(WhoToSendPage.class);
 
-    public WhoToSendPage(WebDriver driver){
-        this.driver=driver;
+    public WhoToSendPage(){
         PageFactory.initElements(driver,this);
     }
     @FindBy(css = "label#friendName>input")
@@ -71,7 +71,7 @@ public class WhoToSendPage {
         sendBlessText(b);
         sendPhoto(photo);
         clickBtn();
-        return new HowToSendPage(driver);
+        return new HowToSendPage();
     }
     public void pickBless(String txt){
         for(WebElement element:blessPool){

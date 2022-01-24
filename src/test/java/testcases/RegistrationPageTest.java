@@ -32,13 +32,13 @@ public class RegistrationPageTest extends TestBase {
     @BeforeMethod(alwaysRun = true)
     public void setup(Method method,String browser) throws Exception {
         loadConfig(browser);
-            registerPage= new RegisterPage(driver);
-            navBarPage= new NavBarPage(driver);
-            searchResultPage= new SearchResultPage(driver);
-            giftCardPage= new GiftCardPage(driver);
-            whoToSendPage= new WhoToSendPage(driver);
-            howToSendPage= new HowToSendPage(driver);
-            loginPage= new LoginPage(driver);
+            registerPage= new RegisterPage();
+            navBarPage= new NavBarPage();
+            searchResultPage= new SearchResultPage();
+            giftCardPage= new GiftCardPage();
+            whoToSendPage= new WhoToSendPage();
+            howToSendPage= new HowToSendPage();
+            loginPage= new LoginPage();
             searchResultPage= navBarPage.pickItem(Constants.amount,Constants.area,Constants.category);
             giftCardPage=searchResultPage.pickGiftCardByBusinessName(Constants.giftCardItem);
             whoToSendPage= giftCardPage.insertAmount(Constants.amount);

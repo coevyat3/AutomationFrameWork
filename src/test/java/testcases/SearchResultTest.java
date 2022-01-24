@@ -19,9 +19,9 @@ public class SearchResultTest extends TestBase {
     @BeforeMethod(alwaysRun = true)
     public void setup(Method method, String browser) throws Exception {
         loadConfig(browser);
-        homePage= new HomePage(driver);
-        navBarPage= new NavBarPage(driver);
-        searchResultPage= new SearchResultPage(driver);
+        homePage= new HomePage();
+        navBarPage= new NavBarPage();
+        searchResultPage= new SearchResultPage();
 
     }
 

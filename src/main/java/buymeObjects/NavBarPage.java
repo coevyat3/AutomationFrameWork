@@ -12,18 +12,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import testBase.TestBase;
 
 import java.util.List;
 
 import static testBase.TestBase.test;
 
-public class NavBarPage {
-    private WebDriver driver;
+public class NavBarPage extends TestBase {
 
     private Logger log= LoggerHelper.getLogger(NavBarPage.class);
 
-    public NavBarPage(WebDriver driver){
-        this.driver=driver;
+    public NavBarPage(){
         PageFactory.initElements(driver,this);
 
 
@@ -54,7 +53,7 @@ public class NavBarPage {
         clickCategory();
         clickActiveList(val3);
         clickSearchBtn();
-        return new SearchResultPage(driver);
+        return new SearchResultPage();
 
     }
     public void clickAmount(){
@@ -96,7 +95,7 @@ public class NavBarPage {
     public SearchResultPage searchFromInputBox(String txt)  {
         sendTextIntoBox(txt);
         clickSearchBtn();
-        return new SearchResultPage(driver);
+        return new SearchResultPage();
     }
     public void clickSearchBtn(){
         log.info("Click on Search me a gift Button "+searchBtn.getText());

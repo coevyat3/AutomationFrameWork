@@ -8,16 +8,17 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import testBase.TestBase;
 
 import java.util.List;
 
 import static testBase.TestBase.test;
 
-public class HowToSendPage {
-    private WebDriver driver;
+public class HowToSendPage extends TestBase {
+
     Logger log= LoggerHelper.getLogger(WhoToSendPage.class);
-    public HowToSendPage(WebDriver driver){
-        this.driver=driver;
+    public HowToSendPage(){
+
         PageFactory.initElements(driver,this);
     }
    @FindBy(css = "div.step.active >div.label")
@@ -79,7 +80,7 @@ public class HowToSendPage {
           setInsertEmail(email);
           setInsertName(name);
           clickBtn();
-          return new LoginPage(driver);
+          return new LoginPage();
     }
 
     public void setClickEmail(){

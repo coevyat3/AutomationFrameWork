@@ -1,7 +1,6 @@
 package testcases;
 
 import buymeObjects.*;
-import helper.assertion.AssertionHelper;
 import helper.resource.ResourceHelper;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
@@ -29,19 +28,19 @@ public class LoginPageTest extends TestBase {
     @BeforeMethod(alwaysRun = true)
     public void setup(Method method, String browser) throws Exception {
         loadConfig(browser);
-        navBarPage= new NavBarPage(driver);
-        searchResultPage= new SearchResultPage(driver);
-        giftCardPage= new GiftCardPage(driver);
-        whoToSendPage= new WhoToSendPage(driver);
-        howToSendPage= new HowToSendPage(driver);
-        loginPage= new LoginPage(driver);
-        homePage= new HomePage(driver);
-        paymentPage=new PaymentPage(driver);
+        navBarPage= new NavBarPage();
+        searchResultPage= new SearchResultPage();
+        giftCardPage= new GiftCardPage();
+        whoToSendPage= new WhoToSendPage();
+        howToSendPage= new HowToSendPage();
+        loginPage= new LoginPage();
+       homePage= new HomePage();
+        paymentPage=new PaymentPage();
 
     }
     @Test
     public void testLogin()  {
-        loginPage= new LoginPage(driver);
+        loginPage= new LoginPage();
         searchResultPage= navBarPage.pickItem(Constants.amount,Constants.area,Constants.category);
         giftCardPage=searchResultPage.pickGiftCardByBusinessName(Constants.giftCardItem);
         whoToSendPage= giftCardPage.insertAmount(Constants.amount);
